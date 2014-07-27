@@ -11,3 +11,4 @@ D:\workplace\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.dll
 D:\workplace\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.pdb
 D:\workplace\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.dll
 D:\workplace\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.pdb
+D:\workplace\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.csprojResolveAssemblyReference.cache
