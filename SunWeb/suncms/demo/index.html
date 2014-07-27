@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SunCMS Administrator Panel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../javascript/lib/jquery-last.min.js"></script>
+    <script type="text/javascript" src="../javascript/lib/jquery-form.js"></script>
+    <script type="text/javascript" src="../javascript/lib/underscore-last.min.js"></script>
+    <script type="text/javascript" src="../javascript/lib/knockout-last.js"></script>
+    <script type="text/javascript" src="../javascript/lib/knockout.mapping-latest.debug.js"></script>
+
+</head>
+
+<body>
+    <div >
+        <p><label data-bind='text:power'></label></p>
+        <p><label data-bind='text:parsePower'></label></p>
+        <p><input type='button' data-bind='click: function (evt) { viewModel.pre(evt) }' /></p>
+        <!--<p><input type='button' data-bind='click: next, value="next"' /></p> -->
+    </div>
+
+    <script type="text/javascript">
+        var json = {
+            data: [
+                {
+                    name: 'alex',
+                    power: 3
+                },
+                {
+                    name: 'alex2',
+                    power: 4
+                },
+                {
+                    name: 'alex3',
+                    power: 5
+                },
+            ]
+        }
+
+
+        var viewModel = ko.mapping.fromJS(json.data[0]);
+
+        viewModel.pre = function (evt) {
+            debugger;
+            ko.mapping.fromJS(json.data[1] ,viewModel);
+        };
+        // 依赖属性 写法 1
+        // viewModel.power = ko.dependentObservable(function () {
+        //     return "this is power33: +   " + this.power();
+
+        // }, viewModel);
+        // 依赖属性 写法 2
+        viewModel.parsePower = ko.dependentObservable({
+            // read 写法 1
+            read: function () {
+                return "this is power: +   " + this.power();
+            },
+            // read 写法 2
+            //read: viewModel.power,
+            write: function (value) {
+                //this.power('i am update data');
+            },
+            owner: viewModel
+        });
+         
+
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>
+

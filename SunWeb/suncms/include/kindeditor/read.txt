@@ -1,0 +1,11 @@
+//vertion
+4.1.7
+
+
+kindedtior.js  修改日志
+
+2013.8.30  lin584
+	// suncms window加载过了 start
+	//_bind(window, 'load', readyFunc);
+	readyFunc();
+	// suncms end

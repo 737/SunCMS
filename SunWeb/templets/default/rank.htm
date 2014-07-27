@@ -1,0 +1,132 @@
+﻿<meta:include src="header.htm"/>
+<div class="main">
+<div class="place bar">全站</div>
+	<div class="boxx l">
+        <div class="tita rank1" id="tab0">
+            <div class="menuon">24小时点击排行</div>
+            <div class="menuoff">本周点击排行</div>
+            <div class="menuoff">本月点击排行</div>
+        </div>
+        <div id="tabc0">
+        <ul class="up suba" style="display: block;">
+            <mc:list cids="-1" type="art" pagesize="10" days=1  so="totalviewdesc">
+			    <li><span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a></li>
+            </mc:list>
+        </ul>
+        <ul class="up suba" style="display: none;">
+            <mc:list cids="-1" type="art" pagesize="10" days=7 so="totalviewdesc">
+        <li>
+          <span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+          <ul class="up suba" style="display: none;">
+            <mc:list  cids="-1" type="art" pagesize="10" days=30 so="totalviewdesc">
+        <li>
+          <span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+        </div>     
+	</div>
+	<div class="boxx r">
+		  <div class="tita rank2" id="taba0">
+            <div class="menuon">今日评论排行</div>
+            <div class="menuoff">本周评论排行</div>
+            <div class="menuoff">本月评论排行</div>
+        </div>
+        <div id="tabca0">
+        <ul class="up suba" style="display: block;">
+            <mc:list cids="-1" type="art" pagesize="10" days=1  so="totalreplydesc">
+			    <li><span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a></li>
+            </mc:list>
+        </ul>
+        <ul class="up suba" style="display: none;">
+            <mc:list cids="-1" type="art" pagesize="10" days=7 so="totalreplydesc">
+        <li>
+          <span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+          <ul class="up suba" style="display: none;">
+            <mc:list cids="-1" type="art" pagesize="10" days=30 so="totalreplydesc">
+        <li>
+          <span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+        </div>    
+	</div>
+	<div class="clear"></div>	
+    <mc:cns type="art">
+    <div class="place bar">{channelname}</div>
+	<div class="boxx l">
+        <div class="tita rank1" id="tab{channelid}">
+            <div class="menuon">24小时点击排行</div>
+            <div class="menuoff">本周点击排行</div>
+            <div class="menuoff">本月点击排行</div>
+        </div>
+        <div id="tabc{channelid}">
+        <ul class="up suba" style="display: block;">
+            <mc:list cids="{channelid}" type="art" pagesize="10" days=1  so="totalviewdesc">
+			    <li><span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a></li>
+            </mc:list>
+        </ul>
+        <ul class="up suba" style="display: none;">
+            <mc:list cids="{channelid}" type="art" pagesize="10" days=7 so="totalviewdesc">
+        <li>
+          <span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+          <ul class="up suba" style="display: none;">
+            <mc:list  cids="{channelid}" type="art" pagesize="10" days=30 so="totalviewdesc">
+        <li>
+          <span class="r">({totalview})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+        </div>     
+	</div>
+	<div class="boxx r">
+		  <div class="tita rank2" id="taba{channelid}">
+            <div class="menuon">今日评论排行</div>
+            <div class="menuoff">本周评论排行</div>
+            <div class="menuoff">本月评论排行</div>
+        </div>
+        <div id="tabca{channelid}">
+        <ul class="up suba" style="display: block;">
+            <mc:list cids="{channelid}" type="art" pagesize="10" days=1  so="totalreplydesc">
+			    <li><span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a></li>
+            </mc:list>
+        </ul>
+        <ul class="up suba" style="display: none;">
+            <mc:list cids="{channelid}" type="art" pagesize="10" days=7 so="totalreplydesc">
+        <li>
+          <span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+          <ul class="up suba" style="display: none;">
+            <mc:list cids="{channelid}" type="art" pagesize="10" days=30 so="totalreplydesc">
+        <li>
+          <span class="r">({totalreply})</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=50}</a>
+        </li>
+        </mc:list>
+        </ul>
+        </div>    
+	</div>
+	<div class="clear"></div>	
+    
+    </mc:cns>
+
+</div>
+  <script type="text/javascript">
+      meta.ui.initTab("tab0", "tabc0", "mouseover", "menuon", "menuoff");
+      meta.ui.initTab("taba0", "tabca0", "mouseover", "menuon", "menuoff");
+      <mc:cns type="art">
+      meta.ui.initTab("tab{channelid}", "tabc{channelid}", "mouseover", "menuon", "menuoff");
+      meta.ui.initTab("taba{channelid}", "tabca{channelid}", "mouseover", "menuon", "menuoff");
+      </mc:cns>
+    </script>
+<meta:include src="footer.htm"></meta:include>

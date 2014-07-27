@@ -1,0 +1,12 @@
+http://www.sxbfgjz.com/admin/login.aspx
+
+
+// cms admin
+http://localhost:17140/suncms/main.aspx
+
+// website index
+
+
+
+// list url
+http://localhost:17140/view-10-1.aspx

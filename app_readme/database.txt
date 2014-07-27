@@ -1,0 +1,14 @@
+
+
+sun_Permissions		根据Roles表的ID 对应 此ID允许的内容/栏目
+sun_UsersInRoles	用记在 Role 中角色
+sun_Roles		SunCMS角色  如:管理员,匿名用户,注册用户,企业用户
+
+   
+
+//缓存前缘
+SUNCMS_CACHE_
+
+
+//未完成 标志
+//sc.log

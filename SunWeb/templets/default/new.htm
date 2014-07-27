@@ -1,0 +1,57 @@
+﻿<meta:include src="header.htm"/>
+<div class="main">
+	<div class="boxa l">
+    <div class="tita">分类列表</div>
+     <ul class="suba bg" id="slist">
+     <li><input id='cn' type="checkbox" checked="checked"/><label for="cn">全部</label></li>
+     <mc:cns type="art">
+     <li><input id='cn{channelid}' type="checkbox" value="{channelid}"/><label for="cn{channelid}">{channelname}</label></li>
+     </mc:cns>
+     </ul>	
+	</div>
+	<div class="boxb r">
+		<div class="place"><a href="[@baseurl]/">首页</a>&nbsp;>&nbsp;<mc:map><a href="{url}">{text}</a></mc:map></div>
+		<div class="list" id="list">
+			<mc:dlistx  client="list" cids="-1" type="art" pagesize="30" load="1" pagecount="5" fun="a_list({0})">
+            <begintag><ul></begintag>
+				<itemformat><li><span class="r">({dateline,t="yyyy-MM-dd hh:mm"})</span>&#8226;&nbsp;<channel><a class="cn" href="{url}" title="{channelname}" target="_blank">[{channelname}]</a></channel><a href="{pageurlb}" title="{subject}" target="_blank">{formatsubject}</a></li></itemformat>
+			<endtag></ul><div class="clear"></div></endtag>
+            <pager><htmlbegin><div class="page"></htmlbegin><beginTag><a href="{firstpage}">首页</a>&nbsp; <a href="{prepage}">上一页</a></beginTag><pages><a href="{pageurl}">{pageindex}</a></pages><endtag><a href="{nextpage}">下一页</a>&nbsp;<a href="{lastpage}">末页</a></endtag><htmlend></div></htmlend></pager>
+			</mc:dlistx>
+        </div>
+	</div>
+	<div class="clear"></div>	
+</div>
+<script type="text/javascript">
+    __load(function () {
+        var lis = meta.g("slist").getElementsByTagName("input");
+        meta.each(lis, function (d) {
+            d.onchange = function () {
+                if (this.checked) {
+                    if (this.id == "cn") {
+                        for (var i = 1; i < lis.length; i++) {
+                            lis[i].checked = false;
+                        }
+                    } else {
+                        lis[0].checked = false;
+                    }
+                }
+
+                a_list(1);
+            }
+        })
+    });
+    function a_list(p) {
+        var a = "&c="
+        var lis = meta.g("slist").getElementsByTagName("input");
+        if (lis[0].checked)
+            a += "-1";
+        else {           
+            for (var i = 1; i < lis.length; i++) {
+                if (lis[i].checked) a += lis[i].value + ',';
+            }
+        }   
+         _list(p,a);    
+    }   
+</script>
+<meta:include src="footer.htm"></meta:include>

@@ -1,0 +1,72 @@
+{
+    "message": "",
+    "state": true,
+    "data": {
+        "configSite": {
+            "rootHost": "http://dedetest123.free174.6464.cn",
+            "webName": "suncms",
+            "indexUrl": "/",
+            "copyright": "Copyright &copy; 2002-2011 SunCMS",
+            "keywords": "sun,suncms",
+            "description": "我是suncms 官方网站",
+            "beian": "沪123456789",
+            "companyName": "上海煦阳网络",
+            "companyTel": "15901965827",
+            "companyAddress": "上海浦东新区"
+        },
+        "configCore": {
+            "webMail": "suncms@qq.ocm",
+            "symbol": "&nbsp;&gt;&nbsp;",
+            "isDeleteUpload": true,
+            "isRewriteUrl": true,
+            "isRecycled": true,
+            "smtpServer": "smtp.qq.com",
+            "smtpPort": 25,
+            "smtpEmail": "suncms@qq.com",
+            "smtpUser": "SunCMS",
+            "smtpCode": "123456"
+        },
+        "configAttach": {
+            "nailWidth": 100,
+            "nailHeight": 50,
+            "imgType": "jpg",
+            "softType": ".rar",
+            "mediaType": ".mp3",
+            "saveStyle": "date",
+            "albumWidth": 100,
+            "albumRowNum": 10,
+            "albumColNum": 3,
+            "albumPageSize": 10,
+            "albumStyle": 3,
+            "albumNailWidth": 30,
+            "isNailFill": true,
+            "nailbgColor": 1,
+            "userMaxFace": 3000,
+            "isUpNailcut": true,
+            "imgMark": true
+        },
+        "configMember": {
+            "isMemOpen": true,
+            "isMemForbID": "33,11,32341324",
+            "memMinID": 6,
+            "memMinCode":6,
+            "isCheckMemEmail": true,
+            "isOpenReg": true
+        },
+        "configPerformance": {
+            "listSize": 10,
+            "cacheFactor": 300,
+            "taskRate": 30,
+            "workThread": 50
+        },
+        "configOther": {
+            "maxSummary": 250,
+            "isImgLocal": true,
+            "isDelLink": true,
+            "isAutokeyword": true,
+            "maxTitle": 300,
+            "dutyAdmin": "admin",
+            "rollClick": -1
+        }
+    }
+}

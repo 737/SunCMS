@@ -1,0 +1,162 @@
+﻿<div id='vm_core_channel_add'>
+    <table class="sun-title">
+        <tr>
+            <td>
+                <a href='javascript:void(0)' data-bind='click: $root.onGoback' target="_self">网站栏目管理</a><span class="fw">&nbsp;&gt;&gt;&nbsp;新建栏目</span>
+            </td>
+        </tr>
+    </table>
+
+    <br/>
+    <div class='sun-tab cf'>
+        <ul class='cf'>
+            <li id='tab_common' data-bind='click: function() { $root.funcTab("table_tab_common", $element) }' class='cur'>常规信息</li>
+            <li id='tab_advanced' data-bind='click: function() { $root.funcTab("table_tab_advanced", $element) }'>高级参数</li>
+            <li id='tab_advanced' data-bind='click: function() { $root.funcTab("table_tab_content", $element) }'>栏目内容</li>
+        </ul>
+    </div>
+    <table id='table_tab_common' class="sun-edit">
+        <tr>
+            <td class="span2">是否隐藏栏目：</td>
+            <td>
+                <input type="checkbox" data-bind="checked: isHidden">
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">内容模型：</td>
+            <td>
+                <select style="width:200px" >
+                    <option value="-8">分类信息|infos</option>
+                    <option value="1" selected="">普通文章|article</option>
+                    <option value="2">图片集|image</option>
+                    <option value="3">软件|soft</option>
+                    <option value="6">商品|shop</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">上级栏目：</td>
+            <td>
+                <label data-bind='text: $root.parseChannelPath()' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">栏目名称：</td>
+            <td>
+                <input type='text' class='span3' data-bind='value: subject' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">排列顺序：</td>
+            <td>
+                <input type='text' class='span1' data-bind='value: sort' />（由低 -> 高）
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">文件保存目录：</td>
+            <td>
+                <input type='text' class='span4' data-bind='value: contentPath' />&nbsp;&nbsp;<input type="checkbox" />&nbsp;拼音
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">默认页的名称：</td>
+            <td>
+                <input type='text' class='span2' data-bind='value: index' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">封面模板：</td>
+            <td>
+                <input type='text' class='span4' data-bind='value: templateIndex' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">列表模板：</td>
+            <td>
+                <input type='text' class='span4' data-bind='value: templateList' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">文章模板：</td>
+            <td>
+                <input type='text' class='span4' data-bind='value: templateBody' />
+            </td>
+        </tr>
+    </table>
+    <table id='table_tab_advanced' class="sun-edit" style='display: none'>
+        <tr>
+            <td class="span2">文章命名规则：</td>
+            <td>
+                <input type='text' class='span3' data-bind='value: bodyRule' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">列表命名规则：</td>
+            <td>
+                <input type='text' class='span3' data-bind='value: listRule' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">SEO标题：</td>
+            <td>
+                <input type='text' class='span3' data-bind='value: seo' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">关键字：</td>
+            <td>
+                <input type='text' class='span6' data-bind='value: keywords' />
+            </td>
+        </tr>
+        <tr>
+            <td class="span2">栏目描述：</td>
+            <td>
+                <textarea rows="4" cols="3" class="span6" data-bind='value: description' ></textarea>
+            </td>
+        </tr>
+    </table>
+    <table id='table_tab_content' class="sun-edit" >
+        <tr>
+            <td>
+                <p>说明：栏目内容是替代原来栏目单独页的更灵活的一种方式，可在栏目模板中用{sun:field.content/}调用，通常用于企业简介之类的用途。</p>
+                <textarea name="后台取值的key"  id="include_editor" data-bind='value: body'></textarea>
+            </td>
+        </tr>
+    </table>
+    <table class="sun-update">
+        <tr>
+            <td id="tip">
+                <dl>
+                    <dt>SunCMS提示:</dt>
+                    <dd>1.目前data、uploads有执行.php权限，非常危险，需要立即取消目录的执行权限</dd>
+                    <dd>2.默认管理目录为dede，需要立即将它更名；</dd>
+                    <dd>3.强烈建议data/common.inc.php文件属性设置为644（Linux/Unix）或只读（NT）</dd>
+                    <dd>4.没有更改默认管理员名称admin，建议您修改为其他管理账号！没有更改默认管理员名称admin，建议您修改为其他管理账号！</dd>
+                    <dd>5.强烈建议将data目录搬移到Web根目录以外；查看如何搬迁</dd>
+                </dl>
+            </td>
+            <td id="action">
+                <ul>
+                    <li class="loading" style="display: none;">
+                        <!--TODO::将图片换成背景图片，以防每次都请求-->
+                        <img alt="loading" src="style/default/images/loading_1.gif" />
+                    </li>
+                    <li class="button">
+                        <input type="button" data-bind='click:$root.onAdd' class="ok" value="" />
+                        <input type="reset" name="reset" class="reset" value="" />
+                        <input type="button" class="back" data-bind='click: $root.onGoback' value="" />
+                    </li>
+                    <li class="message">
+                        <div style="display: none">
+                            <strong>SunCMS&nbsp;提示信息:&nbsp;</strong>
+                            <span class="info">成功更改站点配置！</span>
+                            <input type="button" class="close" title="关闭" value="" />
+                        </div>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+</div>
+

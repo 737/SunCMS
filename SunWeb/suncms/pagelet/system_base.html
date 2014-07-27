@@ -1,0 +1,511 @@
+﻿<div id='vm_base' class="information">
+    <!-- navigation -->
+    <div class="box">
+        <div class="title">
+            SunCMS系统配置参数：
+        </div>
+        <ul class="menu">
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configSite", $element) }'>站点设置</a></li>
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configCore", $element) }'>核心设置</a></li>
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configAttach", $element) }'>附件设置</a></li>
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configMember", $element) }'>会员设置</a></li>
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configPerformance", $element) }'>性能选项</a></li>
+            <li><span>&iota;</span><a data-bind='click: function () { $root.onNavigation("configOther", $element) }'>其它选项</a></li>
+            <li class="unused">添加新变量</li>
+        </ul>
+    </div>
+    <!-- /navigation -->
+    <div class="height20"></div>
+    <div class="box">
+        <div class="title-menu">
+            -&nbsp;站点设置&nbsp;-
+        </div>
+        <!-- site -->
+        <dl id="configSite" class="list">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name" >站点根网址：</span>
+                <span class="variable">global.rootHost</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.rootHost' ></input>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">
+                    网站名称：
+                </span>
+                <span class="variable">global.webName</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.webName' ></input>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">网页主页链接：</span>
+                <span class="variable">global.indexUrl</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.indexUrl' ></input>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">站点默认关键字：</span>
+                <span class="variable">global.keywords</span>
+                <span class="value">
+                    <input type='input' class='span4' data-bind='value: $root.configSite.keywords' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">网站版权信息：</span>
+                <span class="variable">global.copyright</span>
+                <span class="value">
+                    <textarea  rows="4" cols="3" class="span4" data-bind='value: $root.configSite.copyright'></textarea>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">站点描述：</span>
+                <span class="variable">global.description</span>
+                <span class="value">
+                    <textarea  rows="4" cols="3" class="span4" data-bind='value: $root.configSite.description'></textarea>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">
+                    备案号：
+                </span>
+                <span class="variable">global.beian</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.beian' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">公司名称：</span>
+                <span class="variable">global.companyName</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.companyName' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">公司联系方式：</span>
+                <span class="variable">global.companyTel</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configSite.companyTel' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">公司地址：</span>
+                <span class="variable">global.companyAddress</span>
+                <span class="value">
+                    <input type='input' class="span4" data-bind='value: $root.configSite.companyAddress' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /site -->
+        <!-- core -->
+        <dl id="configCore" class="list hide">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name">网站发信EMAIL：</span>
+                <span class="variable">global.webMail</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.webMail' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">栏目位置的间隔符号：</span>
+                <span class="variable">global.symbol</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.symbol' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">删除文章文件同时删除相关附件文件：</span>
+                <span class="variable">global.isDeleteUpload</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configCore.isDeleteUpload' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">否使用伪静态：</span>
+                <span class="variable">global.isRewriteUrl</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configCore.isRewriteUrl' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">文章回收站(是/否)开启：</span>
+                <span class="variable">global.isRecycled</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configCore.isRecycled' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">smtp服务器：</span>
+                <span class="variable">global.smtpServer</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.smtpServer' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">smtp服务器端口：</span>
+                <span class="variable">global.smtpPort</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.smtpPort' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">SMTP服务器的用户邮箱：</span>
+                <span class="variable">global.smtpEmail</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.smtpEmail' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">SMTP服务器的用户帐号：</span>
+                <span class="variable">global.smtpUser</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.smtpUser' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">SMTP服务器的用户密码：</span>
+                <span class="variable">global.smtpCode</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configCore.smtpCode' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /core -->
+        <!-- att -->
+        <dl id="configAttach" class="list hide">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name">缩略图默认宽度：</span>
+                <span class="variable">global.nailWidth</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.nailWidth' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">缩略图默认高度：</span>
+                <span class="variable">global.nailHeight</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.nailHeight' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图片浏览器文件类型：</span>
+                <span class="variable">global.imgType</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.imgType' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">允许上传的软件类型：</span>
+                <span class="variable">global.softType</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.softType' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">允许的多媒体文件类型：</span>
+                <span class="variable">global.mediaType</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.mediaType' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">附件保存形式(按data函数日期参数)：</span>
+                <span class="variable">global.saveStyle</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.saveStyle' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集默认显示图片的大小：</span>
+                <span class="variable">global.albumWidth</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumWidth' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集多行多列样式默认行数：</span>
+                <span class="variable">global.albumColNum</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumRowNum' />
+                </span>
+            </dd>
+
+            <dd>
+                <span class="name">图集多行多列样式默认列数：</span>
+                <span class="variable">global.albumrow</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumColNum' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集多页多图每页显示最大数：</span>
+                <span class="variable">global.albumPageSize</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumPageSize' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集默认样式:
+                    1.多页多图;2.多页单图;3.缩略图表：</span>
+                <span class="variable">global.albumStyle</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumStyle' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集默认缩略图大小：</span>
+                <span class="variable">global.albumNailWidth</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.albumNailWidth' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">缩略图是否使用强制大小(对背景填充)：</span>
+                <span class="variable">global.isNailFill</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configAttach.isNailFill' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">缩略图空白背景填充颜色(0-白,1-黑)：</span>
+                <span class="variable">global.nailbgColor</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.nailbgColor' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">会员上传头像大小限制(单位：KB)：</span>
+                <span class="variable">global.userMaxFace</span>
+                <span class="value">
+                    <input type='input' data-bind='value: $root.configAttach.userMaxFace' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">上传缩略图后是否马上弹出裁剪框：</span>
+                <span class="variable">global.isUpNailcut</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configAttach.isUpNailcut' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">图集是否使用水印(小图也会受影响)：</span>
+                <span class="variable">global.imgMark</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configAttach.imgMark' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /att -->
+        <!-- member -->
+        <dl id="configMember" class="list hide">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name">是否开启会员功能：</span>
+                <span class="variable">global.isMemOpen</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configMember.isMemOpen' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">不允许注册的会员ID：
+                </span>
+                <span class="variable">global.isMemForbID</span>
+                <span class="value">
+                    <textarea  rows="4" cols="3" class="span4" data-bind='value: $root.configMember.isMemForbID'></textarea>
+                </span>
+            </dd>
+            <dd>
+                <span class="name">用户ID最小长度：
+                </span>
+                <span class="variable">global.memMinID</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configMember.memMinID' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">用户密码最小长度：
+                </span>
+                <span class="variable">global.memMinCode</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configMember.memMinCode' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">是否限制Email只能注册一个帐号：
+                </span>
+                <span class="variable">global.isCheckMemEmail</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configMember.isCheckMemEmail' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">是否允许新会员注册：
+                </span>
+                <span class="variable">global.isOpenReg</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configMember.isOpenReg' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /member -->
+        <!-- performance -->
+        <dl id="configPerformance" class="list hide">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name">后台内容列表行数：</span>
+                <span class="variable">global.listSize</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configPerformance.listSize' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">系统缓存系数：
+                </span>
+                <span class="variable">global.cacheFactor</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configPerformance.cacheFactor' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">任务刷新(秒)：
+                </span>
+                <span class="variable">global.taskRate</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configPerformance.taskRate' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">可自动分配的最大任务数：
+                </span>
+                <span class="variable">global.workThread</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configPerformance.workThread' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /performance -->
+        <!-- other -->
+        <dl id="configOther" class="list hide">
+            <dt class="label">
+                <span class="name">参数说明</span>
+                <span class="variable">变量名</span>
+                <span class="value tc">参数值</span>
+            </dt>
+            <dd>
+                <span class="name">自动摘要长度（0-250，0为不启用）：</span>
+                <span class="variable">global.maxSummary</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configOther.maxSummary' />
+                </span>
+            </dd>
+            <dd class="unused">
+                <span class="name">远程图片本地化：
+                </span>
+                <span class="variable">global.isImgLocal</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configOther.isImgLocal' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">删除非站内链接：
+                </span>
+                <span class="variable">global.isDelLink</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configOther.isDelLink' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">自动提取关键字：
+                </span>
+                <span class="variable">global.isAutokeyword</span>
+                <span class="value">
+                    <input type='checkbox' data-bind='checked: $root.configOther.isAutokeyword' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">文档标题最大长度：
+                </span>
+                <span class="variable">global.maxTitle</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configOther.maxTitle' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">默认文档作者：
+                </span>
+                <span class="variable">global.dutyAdmin</span>
+                <span class="value">
+                    <input type='input' class='span3' data-bind='value: $root.configOther.dutyAdmin' />
+                </span>
+            </dd>
+            <dd>
+                <span class="name">文档默认点击数(-1表示随机50-200)：
+                </span>
+                <span class="variable">global.rollClick</span>
+                <span class="value">
+                    <input type='input' class='span1' data-bind='value: $root.configOther.rollClick' />
+                </span>
+            </dd>
+        </dl>
+        <!-- /performance -->
+    </div>
+    <table class="sun-update">
+        <tr>
+            <td id="tip">
+                <dl>
+                    <dt>SunCMS提示:</dt>
+                    <dd>1.目前data、uploads有执行.php权限，非常危险，需要立即取消目录的执行权限</dd>
+                    <dd>2.默认管理目录为dede，需要立即将它更名；</dd>
+                    <dd>3.强烈建议data/common.inc.php文件属性设置为644（Linux/Unix）或只读（NT）</dd>
+                    <dd>4.没有更改默认管理员名称admin，建议您修改为其他管理账号！没有更改默认管理员名称admin，建议您修改为其他管理账号！</dd>
+                    <dd>5.强烈建议将data目录搬移到Web根目录以外；查看如何搬迁</dd>
+                </dl>
+            </td>
+            <td id="action">
+                <ul>
+                    <li class="loading" style="display: none;">
+                        <!--TODO::将图片换成背景图片，以防每次都请求-->
+                        <img alt="loading" src="style/default/images/loading_1.gif" />
+                    </li>
+                    <li class="button">
+                        <input type="submit" name="submit" class="ok" value="" />
+                        <input type="reset" name="reset" class="reset" value="" />
+                        <input type="button" class="back" value="" />
+                    </li>
+                    <li class="message">
+                        <div style="display: none">
+                            <strong>SunCMS&nbsp;提示信息:&nbsp;</strong>
+                            <span class="info">成功更改站点配置！</span>
+                            <input type="button" class="close" title="关闭" value="" />
+                        </div>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+

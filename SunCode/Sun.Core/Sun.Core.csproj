@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CC61857-1FAA-4C28-B241-93DB4D086051}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sun.Core</RootNamespace>
+    <AssemblyName>Sun.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HelperPagelet.cs" />
+    <Compile Include="PageletModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PageletView.cs" />
+    <Compile Include="Wisp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sun.Data\Sun.Data.csproj">
+      <Project>{2fc2dc5b-87e2-42d3-9ca1-7c91432bee26}</Project>
+      <Name>Sun.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Entity\Sun.Entity.csproj">
+      <Project>{38d8d3fb-6414-4125-a353-bbbc6c87ca8b}</Project>
+      <Name>Sun.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.SunControl\Sun.SunControl.csproj">
+      <Project>{7b714803-0eb9-420c-89de-18e4566421db}</Project>
+      <Name>Sun.SunControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Toolkit\Sun.Toolkit.csproj">
+      <Project>{87955659-0c56-45a6-8208-a3d480e2c6f7}</Project>
+      <Name>Sun.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Util\Sun.Util.csproj">
+      <Project>{35297929-ec2a-49ca-9fc3-3400390e8e33}</Project>
+      <Name>Sun.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun\Sun.csproj">
+      <Project>{8112b461-2c18-4dcb-a01e-1794078b02be}</Project>
+      <Name>Sun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,59 @@
+﻿<div id='vm_friendlink' class="friendlink">
+        <table class="sun-title">
+            <tr>
+                <td>友情链接管理</td>
+                <td class="add">
+                    <a href='javascript:void(0)' data-bind='click: $root.gotoAddPage' title="添加友情链接">[增加链接]</a>
+                    <a href="javascript:goto('','添加分类')" title="友情链接分类操作">[分类管理]</a>
+                    <span class="unused">[友情链接预览]</span>
+                </td>
+            </tr>
+        </table>
+        <ul class="sun-filter cf">
+            <li>请选择分类：
+            </li>
+            <li>
+                <select id="friend_groupID" data-bind='options:$root.data.friendLinkGroup,value:"id", optionsValue:"id", optionsText:"Subject"'></select>
+            </li>
+            <li class="padding-left20">关键字：</li>
+            <li>
+                <input type='text' id='friend_subject' class='span2' />
+            </li>
+            <li class="padding-left20">
+                <input type="button" id='btnSearch' onclick='sun.pagelet.module.friendlink.search(this)' name="submit" class="search" value="" />
+            </li>
+        </ul>
+        <div id="friendlink_list">
+            <table class="sun-list bb">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>分类</th>
+                        <th>网站名称</th>
+                        <th>排序</th>
+                        <th>启用</th>
+                        <th>管理</th>
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach:data.friendLink'>
+                    <tr>
+                        <td data-bind='text:id'></td>
+                        <td data-bind='text:groupName'></td>
+                        <td data-bind='text:subject'></td>
+                        <td data-bind='text:sortNum'></td>
+                        <td data-bind='text:$root.parseToWord(isEnable)'></td>
+                        <td>
+                            <a href='javascript:void(0)' data-bind='click: $root.gotoEditPage' target="_self">[更改]</a>
+                            <a href='javascript:void(0)' data-bind='click: $root.onDelete' target="_self">[删除]</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="static" colspan="7"><span data-bind='text:state'></span>共&nbsp;1&nbsp;页/<sun:SunLiteral id="totalAmount" runat="server"></sun:SunLiteral>条记录</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+

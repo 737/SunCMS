@@ -1,0 +1,14 @@
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\Bin\Debug\PanGu.dll
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\Bin\Debug\PanGu.pdb
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\PanGuSegment\PanGu\obj\Debug\PanGu.csprojResolveAssemblyReference.cache
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\PanGuSegment\PanGu\obj\Debug\PanGu.AnalyzerResource.resources
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\PanGuSegment\PanGu\obj\Debug\PanGu.csproj.GenerateResource.Cache
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\PanGuSegment\PanGu\obj\Debug\PanGu.dll
+D:\ZTemp\fenci\PanGu_SourceCode_V2.3.1.0\PanGuSegment\PanGu\obj\Debug\PanGu.pdb
+D:\workplace\SunCMS\Bin\Debug\PanGu.dll
+D:\workplace\SunCMS\Bin\Debug\PanGu.pdb
+D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.AnalyzerResource.resources
+D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.csproj.GenerateResource.Cache
+D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.dll
+D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.pdb
+D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.csprojResolveAssemblyReference.cache

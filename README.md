@@ -1,4 +1,4 @@
-SunCMS
-======
+cms
+===
 
-cms kit
+cms core

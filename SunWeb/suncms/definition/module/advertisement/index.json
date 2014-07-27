@@ -1,0 +1,62 @@
+{
+    "state": true,
+    "message": null,
+    "data": {
+        "advertisement": [
+            {
+                "id": 12,
+                "subject": "阿利11",
+                "siteUrl": "adsfadsf",
+                "details": "123412341234",
+                "isEnable": true,
+                "groupID": 1,
+                "groupName": "默认11",
+                "StartTime": "2012-01-01"
+            },
+            {
+                "id": 11,
+                "subject": "阿利11",
+                "siteUrl": "adsfadsf",
+                "details": "123412341234",
+                "isEnable": true,
+                "groupID": 1,
+                "groupName": "首页",
+                "StartTime": "2012-01-01"
+            },
+            {
+                "id": 2,
+                "subject": "阿利11",
+                "siteUrl": "adsfadsf",
+                "details": "123412341234",
+                "isEnable": true,
+                "groupID": 1,
+                "groupName": "二级页面",
+                "StartTime": "2012-01-01"
+            },
+            {
+                "id": 3,
+                "subject": "阿利11",
+                "siteUrl": "adsfadsf",
+                "details": "123412341234",
+                "isEnable": false,
+                "groupID": 1,
+                "groupName": "顶部",
+                "StartTime": "2012-01-01"
+            }
+        ],
+        "AdvertisementGroup": [
+            {
+                "ID": 5,
+                "subject": "顶部"
+            },
+            {
+                "ID": 4,
+                "subject": "二级页面"
+            },
+            {
+                "ID": 3,
+                "subject": "内页"
+            }
+        ]
+    }
+}

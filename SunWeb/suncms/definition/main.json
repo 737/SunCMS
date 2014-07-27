@@ -1,0 +1,255 @@
+{
+    "message": "",
+    "state": true,
+    "data": {
+        "menu": [
+            {
+                "module": "核心",
+                "key": "core",
+                "children": [
+                    {
+                        "title": "常用操作",
+                        "list": [
+                            {
+                                "name": "栏目管理",
+                                "url": "core_channel.html",
+                                "icoTitle": "添加栏目",
+                                "icoType": "add",
+                                "icoUrl": "core_channel_add.html"
+                            },
+                            {
+                                "name": "系统首页",
+                                "url": "domain_home.html",
+                                "icoTitle": "",
+                                "icoType": null,
+                                "icoUrl": ""
+                            },
+                            {
+                                "name": "内容回收站",
+                                "url": "core_cutform.html",
+                                "icoTitle": "添加单页",
+                                "icoType": null,
+                                "icoUrl": "core_cutform_add.html"
+                            },
+                            {
+                                "name": "测试",
+                                "url": "core_test.html",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    },                    
+                    {
+                        "title": "内容管理",
+                        "list": [
+                            {
+                                "name": "普通文章",
+                                "url": "core_archive.html",
+                                "icoTitle": "添加文章",
+                                "icoType": "add",
+                                "icoUrl": "core_archive_add.html"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "栏目模型",
+                        "list": [
+                            {
+                                "name": "栏目管理",
+                                "url": "core_channel.html",
+                                "icoTitle": "添加栏目",
+                                "icoType": "add",
+                                "icoUrl": "core_channel_add.html"
+                            },
+                            {
+                                "name": "单页文档管理",
+                                "url": "core_cutform.html",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    },
+                    {
+                        "title": "系统帮助",
+                        "list": [
+                            {
+                                "name": "参考文档",
+                                "url": "http://wwww.suncms.cn/help",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "意见建议反馈",
+                                "url": "http://wwww.suncms.cn/back",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "官方交流论坛",
+                                "url": "http://wwww.suncms.cn/bbs",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "module": "模块",
+                "key": "module",
+                "children": [
+                    {
+                        "title": "插件管理",
+                        "list": [
+                            {
+                                "name": "友情链接",
+                                "url": "module_friendlink.html",
+                                "icoTitle": "添加友情链接",
+                                "icoType": "add",
+                                "icoUrl": "module_friendlink_add.html"
+                            },
+                            {
+                                "name": "友情链接分组",
+                                "url": "module_FriendLinkGroup.html",
+                                "icoTitle": "",
+                                "icoType": null,
+                                "icoUrl": ""
+                            },
+                            {
+                                "name": "广告管理",
+                                "url": "module_advertisement.html",
+                                "icoTitle": "添加广告链接",
+                                "icoType": "add",
+                                "icoUrl": "module_advertisement_add.html"
+                            },
+                            {
+                                "name": "广告分组管理",
+                                "url": "module_advertisementgroup.html",
+                                "icoTitle": "",
+                                "icoType": null,
+                                "icoUrl": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "module": "生成",
+                "key": "html",
+                "children": [
+                    {
+                        "title": "自动任务",
+                        "list": []
+                    },
+                    {
+                        "title": "HTML更新",
+                        "list": []
+                    }
+                ]
+            },
+            {
+                "module": "采集",
+                "key": "collect",
+                "children": [
+                    {
+                        "title": "采集管理",
+                        "list": []
+                    }
+                ]
+            },
+            {
+                "module": "用户",
+                "key": "member",
+                "children": [
+                    {
+                        "title": "会员管理",
+                        "list": []
+                    }
+                ]
+            },
+            {
+                "module": "模板",
+                "key": "templet",
+                "children": [
+                    {
+                        "title": "系统帮助",
+                        "list": [
+                            {
+                                "name": "参考文档",
+                                "url": "http://wwww.suncms.cn/help",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "意见建议反馈",
+                                "url": "http://wwww.suncms.cn/back",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "官方交流论坛",
+                                "url": "http://wwww.suncms.cn/bbs",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "module": "系统",
+                "key": "system",
+                "children": [
+                    {
+                        "title": "系统设置",
+                        "list": [
+                            {
+                                "name": "系统基本参数",
+                                "url": "system_base.html",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    },
+                    {
+                        "title": "系统帮助",
+                        "list": [
+                            {
+                                "name": "参考文档",
+                                "url": "http://wwww.suncms.cn/help",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "意见建议反馈",
+                                "url": "http://wwww.suncms.cn/back",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            },
+                            {
+                                "name": "官方交流论坛",
+                                "url": "http://wwww.suncms.cn/bbs",
+                                "icoTitle": null,
+                                "icoType": null,
+                                "icoUrl": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "header": "",
+        "footer": ""
+    }
+}

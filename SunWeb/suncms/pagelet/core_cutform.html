@@ -1,0 +1,56 @@
+﻿<div id='vm_cuteform'>
+        <table class="sun-title">
+            <tr>
+                <td>单页文档管理</td>
+                <td class="add">
+                    <a href='javascript:void(0)' data-bind='click: $root.gotoAddPage' title="添加友情链接">[增加一个单页]</a>
+                    <span class="unused">[更新选中页面]</span>
+                    <span class="unused">[更新所有页面]</span>
+                </td>
+            </tr>
+        </table>
+        <ul class="sun-filter cf">
+            <li class="padding-left20">关键字：</li>
+            <li>
+                <input type='text' id='friend_subject' class='span2' />
+            </li>
+            <li class="padding-left20">
+                <input type="button" id='btnSearch' onclick='sun.pagelet.module.friendlink.search(this)' name="submit" class="search" value="" />
+            </li>
+        </ul>
+        <div id="friendlink_list">
+            <table class="sun-list bb">
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>编号</th>
+                        <th>页面名称</th>
+                        <th>是否编译</th>
+                        <th>修改时间</th>
+                        <th>管理</th>
+                    </tr>
+                </thead>
+                <tbody data-bind='foreach: $root.cuteform'>
+                    <tr>
+                        <td><input type='checkbox'/></td>
+                        <td data-bind='text:id'></td>
+                        <td data-bind='text:subject'></td>
+                        <td data-bind='text:isRebuild'></td>
+                        <td data-bind='text:time'></td>
+                        <td>
+                            <a href='javascript:void(0)' 
+                                data-bind='click: $root.gotoEditPage' target="_self">[编辑]</a><a href='javascript:void(0)' 
+                                data-bind='click: $root.gotoEditPage' target="_self">[预览]</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href='javascript:void(0)' 
+                                data-bind='click: $root.onDelete' target="_self">[删除]</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="static" colspan="7">共&nbsp;1&nbsp;页/<sun:SunLiteral id="totalAmount" runat="server"></sun:SunLiteral>条记录</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+

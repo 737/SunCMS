@@ -1,0 +1,35 @@
+﻿ <mc:view visible="{@HasAtts}">
+ <link type="text/css" rel="stylesheet" href="[@u:path]vpic/css/css.css" media="screen" />
+     <div id="imgBox">
+        <AttArray max=1>
+        <div style="text-align:center" class="picDiv" id="picDiv">
+          <a id="bigLink"><img onmousemove="imageonmousemove(event)" id="bigImage" src="{FullName}" width="560" height="400" alt="{description}"/></a>
+          <p style="text-align:left;color:#a1a1a1;" id="desDiv">{description}</p>
+        </div>  
+        </AttArray>     
+        <div class="clear"></div>
+        <div class="photoList">      
+          <div class="picList">
+            <div class="l1"><img src="[@u:path]vpic/imgs/icon_28.gif" width="22" height="58" id="scrollleft" /></div>
+            <div class="l2">
+              <div class="listM" style="position:relative">
+                <ul id="scrollcontent" style="position:absolute; width:10000px ">
+                 <AttArray>
+                  <li><a onclick="showPic([@rowindex]-1)"><img src="{vpath}" width="106" height="70" alt="{description}" /></a></li>
+                 </AttArray>
+                </ul>
+              </div>              
+              <div class="scrollBar">
+                  <div class="drag" id="scrollbar" style="left: 6px;visibility:visible;"><img height="19" width="162" src="[@u:path]vpic/imgs/icon_39.gif"></div>
+              </div>            
+           </div>
+           <div class="l3"><img src="[@u:path]vpic/imgs/icon_31.gif" width="22" height="58" id="scrollright" /></div>
+          </div>       
+          <div class="clear"></div>
+        </div>
+        <div class="space20"></div>
+        <div class="clear"></div>
+      </div>
+ <script type="text/javascript" src="[@u:path]vpic/js/slide.hd.js"></script> 
+ </mc:view>       
+    

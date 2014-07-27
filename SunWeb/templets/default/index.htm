@@ -1,0 +1,120 @@
+﻿<meta:include src="header.htm"></meta:include>
+<div class="main">
+    <div class="boxb l">
+        <div class="boxc l">
+            <div class="focus">
+                <mp:rotator w="290" h="242" count="5" len="30" rep="…"></mp:rotator>
+            </div>
+            <div class="tita">
+                <span class="more"></span>推荐阅读</div>
+            <ul class="bul suba">
+                <mc:list type="art" pagesize="7" re="2" so="datelinedesc">
+				<li><span class="r">{dateline,t="MM-dd"}</span><a href="{pageurlb}" title="{subject}" target="_blank">{formatsubject,l=36}</a></li>
+			</mc:list>
+            </ul>
+        </div>
+        <div class="boxd r">
+            <div class="bignews"> 
+                    <mc:list type="art" re="3" pagesize="3">
+				<h1><a href="{pageurlb}" target="_blank" title="{subject}">{formatsubject,l=48}</a></h1>
+				<h2>{Description,l=120 r=...}&nbsp;&nbsp;<a href="{pageurlb}" target="_blank">[详细]</a></h2>
+				</mc:list>
+                    <ul class="aul">
+                        <mc:list type="art" pagesize="8" so="datelinedesc">
+					<li><span class="r">{dateline,t="MM-dd HH:mm"}</span>[<a href="[@u:{channelid}]" target="_blank" alt="{channelname}">{channelname}</a>] <a href="{pageurlb}" title="{subject}" target="_blank">{formatsubject,l=32 r=...}</a></li>
+				</mc:list>
+                    </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="boxa r">
+        <div class="bottom">
+            <a href="" target="_blank">
+                <img src="[@u:path]img/uecms.jpg" alt="下载" /></a></div>
+        <div class="tita">
+            专题</div>
+       
+        <dl class="suba sp">
+            <mc:sps pagesize="2">            
+					<a href="{url}" target="_blank"><img alt="{subject}" src="[@baseurl]/t.ashx?src={ImageUrl}&s=2&w=200&h=60" /></a>
+<dt><a href="{url}" title="{specialName}" target="_blank">{specialName,l=56}</a></dt>
+<dd>{Description,l=90 r=...}</dd>
+				</mc:sps>
+        </dl>
+    </div>
+    <div class="clear">
+    </div>   
+    <div class="row"><img src="[@u:path]img/banner.jpg" /> </div>    
+       <div class="tita">
+              图文</div>
+              <div class="suba">
+                <ul class="picaul">
+                  <mp:imgart pagesize="7"><li><a href="{pageurlb}" target="_blank"><img alt="{subject}" src="[@baseurl]/t.ashx?src={ImageUrl}&s=2&w=120&h=80" /></a><span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=20}</a></span></li></mp:imgart>              
+                </ul>
+   <div class="clear"></div>   
+</div>
+    <div class="boxm l">
+        <mc:cns type="art">
+        <div class="lumpa">
+           <div class="tita"><span class="more"><a href="[@u:{channelid}]" target="_blank">更多&gt;&gt;</a></span>{channelname}</div>
+           <div class="subb">
+               <dl class="picb">
+              <mp:imgart cids="{channelid}">              
+            <a href="{pageurlb}" target="_blank"><img alt="{subject}" src="[@baseurl]/t.ashx?src={ImageUrl}&s=2&w=120&h=80" /></a>
+<dt><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=30}</a></dt>
+<dd>{description,l=80 r=...}</dd>
+              </mp:imgart>
+              </dl><div class="clear"></div>                
+              <ul>
+              <mc:list type='art' cids='{channelid}' pagesize='4'><li>&#8226;&nbsp;<a href="{pageurlb}" title="{subject}" target="_blank">{formatsubject,l=50}</a></li></mc:list>
+              </ul>
+              <div class="clear"></div>
+            </div>
+        </div>
+        </mc:cns>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="boxa r">
+           <div class="tita" id="tab1">
+            <div class="menuon">
+                阅读排行</div>
+            <div class="menuoff">
+                评论排行</div>
+        </div>
+        <div id="tabc1">
+        <ul class="up suba" style="display: block;">
+            <mc:dlist id="list1" type="art" pagesize="10" so="totalviewdesc">
+			    <li><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=28}</a></li>
+      </mc:dlist>
+        </ul>
+        <ul class="up suba" style="display: none;">
+            <mc:dlist id="list2" type="art" pagesize="10" so="totalreplydesc">
+        <li>
+          <a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=28}</a>
+        </li>
+      </mc:dlist>
+        </ul></div>
+        <div class="tita">
+            调查</div>
+        <ul class="bul suba">
+            <mp:vt count="1"></mp:vt>
+        </ul>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="links">
+        <ul>
+            <li class="tit">友情链接</li>
+            <mp:links pagesize="100">
+<li><a href="{url}" target="_blank" title="{Title}">{Title}</a></li>
+</mp:links>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        meta.ui.initTab("tab1", "tabc1", "mouseover", "menuon", "menuoff");
+    </script>
+    </div>
+    <meta:include src="footer.htm"></meta:include>

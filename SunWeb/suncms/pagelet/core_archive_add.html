@@ -1,0 +1,160 @@
+﻿    <div class="ad" id='vm_core_archive_add'>
+        <table class="sun-title">
+            <tr>
+                <td class="subject">
+                    <a href='javascript:void(0)' data-bind='click: $root.onGoback' target="_self">文章列表</a><span class="fw">&nbsp;&gt;&gt;&nbsp;更新文档</span>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <div class='sun-tab cf'>
+            <ul class='cf'>
+                <li id='tab_common' data-bind='click: function() { $root.funcTab("tab_common") }' class='cur'>常规信息</li>
+                <li id='tab_advanced' data-bind='click: function() { $root.funcTab("tab_advanced") }'>高级参数</li>
+            </ul>
+        </div>
+        <table id='table_tab_common' class="sun-edit">
+            <tr>
+                <td class="span2">文章标题：</td>
+                <td>
+                    <input type="text" class="span5 subject-ruler" data-bind='value: $root.subject'  />&nbsp;&nbsp;
+                    简略标题：<input type="text" class="span2" data-bind='value: shortSubject' />
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">自定义属性：</td>
+                <td>
+                    <input type="checkbox" name="flags" value="head"/>头条[h]
+                    <input type="checkbox" name="flags" value="c"/>推荐[c]
+                    <input type="checkbox" name="flags" value="f"/>幻灯[f]
+                    <input type="checkbox" name="flags" value="a"/>特荐[a]
+                    <input type="checkbox" name="flags" value="s"/>滚动[s]
+                    <input type="checkbox" name="flags" value="b"/>加粗[b]
+                    <input type="checkbox" name="flags" value="p"/>图片[p]
+                    <input type="checkbox" name="flags" value="j"/>跳转[j]
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">TAG标签：</td>
+                <td>
+                    <input type="text" class='span4' data-bind='value: tag' />&nbsp;(','号分开，单个标签小于12字节)
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">缩 略 图：</td>
+                <td >
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">文章来源：</td>
+                <td>
+                    <input type="text" class="span2" data-bind='value: source'/>&nbsp;&nbsp;
+                    作&nbsp;者：<input type="text" class="span2" data-bind='value: author' />
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">文章栏目：</td>
+                <td>
+                    <select id='dom_channel' style="width:200px" data-bind='event: { change: function() { $root.channelChange($element) } }, options: channel, optionsValue:"id", optionsText:"subject" '></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">附加选项：</td>
+                <td>
+                    <input type="checkbox" name="flags" value="head"/>下载远程图片和资源
+                    <input type="checkbox" name="flags" value="c"/>提取第一个图片为缩略图
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">文章内容：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan = 2>
+                    <textarea name=""  id="include_editor" data-bind='value: body'></textarea>
+                </td>
+            </tr>
+        </table>
+        <table id='table_tab_advanced' class="sun-edit" style='display: none'>
+            <tr>
+                <td class="span2">浏览次数：</td>
+                <td>
+                    <input type="text" class="span2" data-bind='value: clicked'/>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="span2">文章排序：</td>
+                <td>
+                    <select name="sortup" id="sortup" >
+                        <option value="0">正常排序</option>
+                        <option value="7">置顶一周</option>
+                        <option value="30">置顶一个月</option>
+                        <option value="90">置顶三个月</option>
+                        <option value="180">置顶半年</option>
+                        <option value="360">置顶一年</option>
+                    </select>
+                </td>
+                <td class="span2">标题颜色：</td>
+                <td data-bind='style: { backgroundColor : (function() { return "#" + color() })() }'>
+                    <input id='include_pickerColor' type="text" class="span2" data-bind='value: color' />
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">更新时间：</td>
+                <td>
+                    <input id="include_pickDate" class='span2' value="" type="text" data-bind='value: time' />
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="span2">关键字：</td>
+                <td colspan='3'>
+                    <input type="text" class="span6" data-bind='value: keyword' />
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">文章摘要：</td>
+                <td colspan='3'>
+                    <textarea rows="4" cols="3" class="span6" data-bind='value: description' ></textarea>
+                </td>
+            </tr>
+        </table>
+        <table class="sun-update">
+            <tr>
+                <td id="tip">
+                    <dl>
+                        <dt>SunCMS提示:</dt>
+                        <dd>1.目前data、uploads有执行.php权限，非常危险，需要立即取消目录的执行权限</dd>
+                        <dd>2.默认管理目录为dede，需要立即将它更名；</dd>
+                        <dd>3.强烈建议data/common.inc.php文件属性设置为644（Linux/Unix）或只读（NT）</dd>
+                        <dd>4.没有更改默认管理员名称admin，建议您修改为其他管理账号！没有更改默认管理员名称admin，建议您修改为其他管理账号！</dd>
+                        <dd>5.强烈建议将data目录搬移到Web根目录以外；查看如何搬迁</dd>
+                    </dl>
+                </td>
+                <td id="action">
+                    <ul>
+                        <li class="loading" style="display: none;">
+                            <!--TODO::将图片换成背景图片，以防每次都请求-->
+                            <img alt="loading" src="style/default/images/loading_1.gif" />
+                        </li>
+                        <li class="button">
+                            <input type="button" data-bind='click:$root.onAdd' class="ok" value="" />
+                            <input type="reset" name="reset" class="reset" value="" />
+                            <input type="button" class="back" data-bind='click: $root.onGoback' value="" />
+                        </li>
+                        <li class="message">
+                            <div style="display: none">
+                                <strong>SunCMS&nbsp;提示信息:&nbsp;</strong>
+                                <span class="info">成功更改站点配置！</span>
+                                <input type="button" class="close" title="关闭" value="" />
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>

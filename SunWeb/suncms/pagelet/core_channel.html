@@ -1,0 +1,43 @@
+﻿<div id='vm_core_channel'>
+    <table class="sun-title">
+        <tr>
+            <td>网站栏目管理</td>
+            <td class="add">
+                <a href='javascript:void(0)' data-bind='click: $root.gotoAddPage' title="增加顶级栏目">[增加顶级栏目]</a>
+            </td>
+        </tr>
+    </table>
+    <ul class="sun-filter tr cf">
+        <li class=""><a data-bind='click: $root.onExposeAll'>[展开全部]</a></li>
+    </ul>
+    <div id='channel_box' data-bind="template: { name: 'seasonTemplate', foreach: channel }">
+    </div>
+
+    <script type="text/html" id="seasonTemplate">
+        <table class='sun-list-channel' >
+            <tbody>
+                <tr>
+                    <td><input type='checkbox' /><span data-bind='click: $root.onExpose'></span><a data-bind='click: $root.gotoArchive, text: subject'></a>[channelId:<label data-bind='text: channelId'></label>]&nbsp;(当前文档数:<label data-bind='text: count'></label>条,&nbsp;子类总文档数:<label data-bind='text: subCount'></label>条)</td>
+                    <td style='text-align: right'>
+                        <a target='_blank' 
+                            data-bind='' >预览</a>|<a target='_self' 
+                            data-bind='click: $root.gotoArchive' >内容</a>|<a  target='_self'
+                            data-bind='click: $root.gotoAddPageForChild' >增加子类</a>|<a target='_self' 
+                            data-bind='click: $root.gotoEditPage' >更改</a>|<a target='_self' 
+                            data-bind='click: $root.gotoMovePage' >移动</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a target='_self' 
+                            data-bind='click: $root.onDelete' >删除</a>&nbsp;&nbsp;<input type="text" class='span1 tc' 
+                            data-bind='value: sort'/>
+                    </td>
+                </tr>
+                
+                <tr style="display: none">
+                    <td colspan='2' style='border:none' data-bind=" template: { name: 'seasonTemplate', foreach: $root.parseChild(children) } , visible: children().length > 0">
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </script>
+
+</div>
+

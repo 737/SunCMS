@@ -1,0 +1,9 @@
+D:\workplace\DoNetDemo\SunMVCDemo\Sun.Zone\bin\Debug\Sun.Zone.dll
+D:\workplace\DoNetDemo\SunMVCDemo\Sun.Zone\bin\Debug\Sun.Zone.pdb
+D:\workplace\DoNetDemo\SunMVCDemo\Sun.Zone\obj\Debug\Sun.Zone.dll
+D:\workplace\DoNetDemo\SunMVCDemo\Sun.Zone\obj\Debug\Sun.Zone.pdb
+D:\workplace\SunCMS\SunCode\Sun.Zone\bin\Debug\Sun.Zone.dll
+D:\workplace\SunCMS\SunCode\Sun.Zone\bin\Debug\Sun.Zone.pdb
+D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.dll
+D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.pdb
+D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.csprojResolveAssemblyReference.cache

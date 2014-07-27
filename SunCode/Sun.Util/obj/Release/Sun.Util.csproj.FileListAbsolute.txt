@@ -1,0 +1,5 @@
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Util\bin\Release\Sun.Util.dll
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Util\bin\Release\Sun.Util.pdb
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Util\obj\Release\Sun.Util.dll
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Util\obj\Release\Sun.Util.pdb
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Util\obj\Release\Sun.Util.csprojResolveAssemblyReference.cache

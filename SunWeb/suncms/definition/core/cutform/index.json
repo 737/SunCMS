@@ -1,0 +1,32 @@
+{
+    "message": "",
+    "state": true,
+    "data": {
+        "cuteform": [
+            {
+                "id": 1,
+                "subject": "企业简介",
+                "isRebuild": false,
+                "time": "2012-01-03"
+            },
+            {
+                "id": 2,
+                "subject": "企业文化",
+                "isRebuild": false,
+                "time": "2012-01-03"
+            },
+            {
+                "id": 3,
+                "subject": "企业联系方式",
+                "isRebuild": false,
+                "time": "2012-01-03"
+            },
+            {
+                "id": 4,
+                "subject": "企业荣誉",
+                "isRebuild": false,
+                "time": "2012-01-03"
+            }
+        ]
+    }
+}

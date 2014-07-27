@@ -1,0 +1,23 @@
+{
+    "state": true,
+    "message": null,
+    "data": {
+        "advertisementGroup": [
+            {
+                "id": 5,
+                "subject": "顶部",
+                "description": "1111"
+            },
+            {
+                "id": 1,
+                "subject": "二级页面",
+                "description": "1111"
+            },
+            {
+                "id": 3,
+                "subject": "内页",
+                "description": "1111"
+            }
+        ]
+    }
+}

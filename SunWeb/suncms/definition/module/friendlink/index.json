@@ -1,0 +1,68 @@
+{
+    "state": true,
+    "message": null,
+    "data": {
+        "FriendLink": [
+            {
+                "ID": 12,
+                "Subject": "阿利11",
+                "SiteUrl": "adsfadsf",
+                "SortNum": 0,
+                "LogoUrl": "qwerqwer",
+                "Description": "asdfasdfasdfasdf",
+                "GroupID": 1,
+                "IsEnable": true,
+                "GroupName": "默认11"
+            },
+            {
+                "ID": 6,
+                "Subject": "上海搬家网",
+                "SiteUrl": "banjia.sh.cn",
+                "SortNum": 11,
+                "LogoUrl": "",
+                "Description": "",
+                "GroupID": 4,
+                "IsEnable": true,
+                "GroupName": "兄弟链接"
+            },
+            {
+                "ID": 4,
+                "Subject": "跟斗云",
+                "SiteUrl": "Http://www.gendouyun.cn",
+                "SortNum": 1,
+                "LogoUrl": "../ccccc/asdf.jpg",
+                "Description": "跟斗云，网址大全",
+                "GroupID": 1,
+                "IsEnable": false,
+                "GroupName": "默认11"
+            }
+        ],
+        "friendLinkGroup": [
+            {
+                "id": 5,
+                "subject": "其它",
+                "description": "aaaadsfasdfasdf"
+            },
+            {
+                "id": 4,
+                "subject": "兄弟链接",
+                "description": "1234"
+            },
+            {
+                "id": 3,
+                "subject": "内面",
+                "description": "5435"
+            },
+            {
+                "id": 2,
+                "subject": "首页链接",
+                "description": "1234"
+            },
+            {
+                "id": 1,
+                "subject": "默认",
+                "description": "默认分组"
+            }
+        ]
+    }
+}

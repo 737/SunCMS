@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8112B461-2C18-4DCB-A01E-1794078B02BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sun</RootNamespace>
+    <AssemblyName>Sun</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="configFile\file\appSetting.cs" />
+    <Compile Include="configFile\file\assemblies.cs" />
+    <Compile Include="configFile\file\ConfigSun.cs" />
+    <Compile Include="configFile\file\Location.cs" />
+    <Compile Include="configFile\entity\entitySystem.cs" />
+    <Compile Include="configFile\helper\ConfigHelper.cs" />
+    <Compile Include="configFile\file\configTag.cs" />
+    <Compile Include="config_web\sunHttpModule.cs" />
+    <Compile Include="formatting\typeFormatField.cs" />
+    <Compile Include="Helper\HelperContext.cs" />
+    <Compile Include="EPageletAction.cs" />
+    <Compile Include="diagnostics\log.cs" />
+    <Compile Include="ProviderData.cs" />
+    <Compile Include="formatting\textFormatting.cs" />
+    <Compile Include="Handlers\AuthCodeHandler.cs" />
+    <Compile Include="Helper\Console.cs" />
+    <Compile Include="Helper\HelperSerialization.cs" />
+    <Compile Include="Helper\HelperNameValueCollection.cs" />
+    <Compile Include="Helper\HelperTranslation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="configFile\rewriter\rewriterRule.cs" />
+    <Compile Include="configFile\rewriter\configRewriter.cs" />
+    <Compile Include="SunCache.cs" />
+    <Compile Include="configFile\file\tagEntity.cs" />
+    <Compile Include="formatting\typeFormatting.cs" />
+    <Compile Include="configFile\file\configSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sun.Toolkit\Sun.Toolkit.csproj">
+      <Project>{87955659-0c56-45a6-8208-a3d480e2c6f7}</Project>
+      <Name>Sun.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Util\Sun.Util.csproj">
+      <Project>{35297929-ec2a-49ca-9fc3-3400390e8e33}</Project>
+      <Name>Sun.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

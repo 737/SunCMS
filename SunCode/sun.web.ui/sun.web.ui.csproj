@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sun.web.ui</RootNamespace>
+    <AssemblyName>sun.web.ui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="channelRender.cs" />
+    <Compile Include="contentRender.cs" />
+    <Compile Include="pageNotFound.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sun.API\Sun.API.csproj">
+      <Project>{e1779362-41a3-487a-a325-1347a9d9cc76}</Project>
+      <Name>Sun.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Entity\Sun.Entity.csproj">
+      <Project>{38d8d3fb-6414-4125-a353-bbbc6c87ca8b}</Project>
+      <Name>Sun.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sun.generating\sun.generating.csproj">
+      <Project>{d35146e1-e210-4de2-9349-5846b29dd50a}</Project>
+      <Name>sun.generating</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Toolkit\Sun.Toolkit.csproj">
+      <Project>{87955659-0c56-45a6-8208-a3d480e2c6f7}</Project>
+      <Name>Sun.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun\Sun.csproj">
+      <Project>{8112b461-2c18-4dcb-a01e-1794078b02be}</Project>
+      <Name>Sun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

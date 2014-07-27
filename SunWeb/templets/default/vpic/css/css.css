@@ -1,0 +1,28 @@
+﻿#imgBox {font-size:12px; font-family: yiahe,simsun,arial,helvetica,clean,sans-serif;color:#2b2b2b;width:580px;margin:0 auto;background:#fff;clear:both}
+#imgBox a{color:#2b2b2b; text-decoration:none;} 
+#imgBox a:hover {text-decoration:underline;}
+#imgBox p,#imgBox ul{ margin:0; padding:0;}
+#imgBox .clear{clear:both;height:0px;margin:0 auto;font-size:0px;line-height:0px;clear:both}
+
+ 
+#imgBox .picDiv{width:580px;padding-top:15px;margin:0 auto}
+#imgBox .picDiv img{border:1px #2e2e2e solid}
+#imgBox .picDiv p{padding:15px 0 22px;line-height:18px;color:#a1a1a1;text-indent:2em}
+#imgBox .photoList{width:580px;margin:0 auto;clear:both}
+#imgBox .photoList .picList{width:554px;float:left;margin:0 10px;background:#fff;display:inline}
+#imgBox .photoList .picList .l1{width:30px;height:102px;padding:15px 0 0 12px;float:left;cursor:pointer}
+#imgBox .photoList .picList .l2{width:470px;height:117px;float:left}
+#imgBox .photoList .picList .l3{width:30px;height:102px;padding:15px 10px 0 0;float:left;cursor:pointer}
+#imgBox .photoList .picList .listM{width:470px;height:72px;overflow:hidden;margin-top:9px;float:left}
+#imgBox .photoList .picList .listM ul{width:10000px;float:left;left:0;}
+#imgBox .photoList .picList .listM li{width:108px;margin:0 5px;display:inline;float:left}
+#imgBox .photoList .picList .listM img{width:106px;height:70px;border:1px #666 solid}
+#imgBox .photoList .picList .scrollBar{width:460px;height:19px;margin:9px 5px 0;display:inline;float:left;position:relative;background:#f3f3f3;}
+#imgBox .photoList .picList .scrollBar .drag{position:absolute;top:0px;left:0px;cursor:pointer}
+#imgBox .photoList .picList .listM a:hover img{border:1px #a46b00 solid}
+#imgBox .picDiv p{text-indent:0px;padding:8px 22px 42px;line-height:22px;color:#fff}
+#imgBox .picDiv p a{color:#a46b00}
+#imgBox .space5{clear:both;height:5px;line-height:0;font-size:0}
+#imgBox .space10{clear:both;height:10px;line-height:0;font-size:0}
+#imgBox .space15{clear:both;height:15px;line-height:0;font-size:0}
+#imgBox .space20{clear:both;height:20px;line-height:0;font-size:0}

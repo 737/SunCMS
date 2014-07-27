@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDD971ED-2302-4773-BCFA-0DB7CFB70498}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sun.Zone</RootNamespace>
+    <AssemblyName>Sun.Zone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\ActionExecutor.cs" />
+    <Compile Include="Action\IActionResult.cs" />
+    <Compile Include="Action\JsonResult.cs" />
+    <Compile Include="Action\PageResult.cs" />
+    <Compile Include="Action\RedirectResult.cs" />
+    <Compile Include="Action\UcResult.cs" />
+    <Compile Include="Action\XmlResult.cs" />
+    <Compile Include="Attribute\ActionAttribute.cs" />
+    <Compile Include="Attribute\AuthorizeAttribute.cs" />
+    <Compile Include="Attribute\HttpValueIgnoreAttribute.cs" />
+    <Compile Include="Attribute\PageUrlAttribute.cs" />
+    <Compile Include="Attribute\SessionModeAttribute.cs" />
+    <Compile Include="Cache\ConfigManager.cs" />
+    <Compile Include="Cache\OutputCacheAttribute.cs" />
+    <Compile Include="Cache\OutputCacheConfig.cs" />
+    <Compile Include="Cache\SetOutputCacheModule.cs" />
+    <Compile Include="Context\CookieHelper.cs" />
+    <Compile Include="Context\HttpContextHelper.cs" />
+    <Compile Include="Context\TestEnvironment.cs" />
+    <Compile Include="Exception\ExceptionHelper.cs" />
+    <Compile Include="Extension\HttpExtensions.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Extension\UiHelper.cs" />
+    <Compile Include="Module\GzipModule.cs" />
+    <Compile Include="OptimizeReflection\DynamicMethodEmit.cs" />
+    <Compile Include="OptimizeReflection\MethodWrapper.cs" />
+    <Compile Include="OptimizeReflection\PropertyWrapper.cs" />
+    <Compile Include="OptimizeReflection\ReflectionExtensions.cs" />
+    <Compile Include="Output\PageExecutor.cs" />
+    <Compile Include="Output\ResponseWriter.cs" />
+    <Compile Include="Output\UcExecutor.cs" />
+    <Compile Include="Pipeline\ActionHandler.cs" />
+    <Compile Include="Pipeline\apiHandlerFactory.cs" />
+    <Compile Include="Pipeline\pageletHandlerFactory.cs" />
+    <Compile Include="Pipeline\UrlParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\ActionDescription.cs" />
+    <Compile Include="Reflection\BaseDescription.cs" />
+    <Compile Include="Reflection\ControllerActionPair.cs" />
+    <Compile Include="Reflection\ControllerDescription.cs" />
+    <Compile Include="Reflection\DataMember.cs" />
+    <Compile Include="Reflection\InvokeInfo.cs" />
+    <Compile Include="Reflection\ModelDescripton.cs" />
+    <Compile Include="Reflection\ModelHelper.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Reflection\VoidType.cs" />
+    <Compile Include="Serializer\ActionParametersProviderFactory.cs" />
+    <Compile Include="Serializer\FormDataProvider.cs" />
+    <Compile Include="Serializer\IActionParametersProvider.cs" />
+    <Compile Include="Serializer\JsonDataProvider.cs" />
+    <Compile Include="Serializer\XmlDataProvider.cs" />
+    <Compile Include="Toolkit.cs" />
+    <Compile Include="View\MyBaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MyBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MyBaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PageView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ControlView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewType.cs" />
+    <Compile Include="View\ViewTypeParserFilter.cs" />
+    <Compile Include="Xml\XmlHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

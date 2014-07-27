@@ -1,0 +1,13 @@
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.dll
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.pdb
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.csprojResolveAssemblyReference.cache
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.dll
+C:\Project\deploy\tomcat\webapps\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.pdb
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.dll
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.pdb
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.dll
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.pdb
+D:\workplace\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.dll
+D:\workplace\SunCMS\SunCode\Sun.Lab\bin\Debug\Sun.Lab.pdb
+D:\workplace\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.dll
+D:\workplace\SunCMS\SunCode\Sun.Lab\obj\Debug\Sun.Lab.pdb

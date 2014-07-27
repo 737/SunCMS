@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=[@s:charset]" />
+<title><mc:sp>{specialname}</mc:sp> [@s:key1][@s:sitetitle]</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta name="description" content="[@description|s:description]" />
+<meta name="keywords" content="[@keywords|s:keywords]" />
+<link rel="stylesheet" type="text/css" href="[@u:path]css/style.css" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="[@u:path]js/cms.js"></script>
+</head>
+<body>
+<div class="top">
+	<span class="l"><a  onclick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.sxcms.com');" href="#"  >设为首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:window.external.AddFavorite(location.href,document.title);" >加入收藏</a></span>
+	<span class="r">	
+	<span id="loged" style="display:none" >欢迎您,<span id="u"></span> | <a href="[@baseurl]/member/default.aspx" target="_blank">个人管理</a> | <a  href="[@baseurl]/member/logout.aspx">退出</a></span>
+	<span id="login" style="display:none" ><a href="[@baseurl]/member/reg.aspx" >注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="[@baseurl]/member/login.aspx" >登录</a></span></span>
+	<mc:Entr fun='getust'></mc:Entr>
+</div>
+<img src="[@u:path]img/topics.gif" />
+<div id="topics"><mc:sp>
+	<div class="boxs l"><img alt="{specialname}" src="t.ashx?src={imageurl}&s=2&w=467&h=350" /></div>
+	<div class="boxs r">
+		<div><img src="[@u:path]img/topics_tit.gif" /></div>
+		<div class="tita">{specialname}</div>
+		<div class="body">{Description}</div>
+	</div>
+	<div class="clear"></div>
+	<childs>
+	<div class="boxs l mb18 mr18">
+		<div class="titb"><span class="iconh"></span><span class="f14 b blue">{specialname}</span></div>
+		<ul class="ula f14">
+			<mc:splist type="art" sid="{specialid}" pagesize="20"><li><span class="r gray">[<span class="red">{dateline,t="MM-dd"}</span>]</span><a href="{pageurlb}" title="{subject}" target="_blank">{subject,l=46 r=...}</a></li></mc:splist>
+          	</ul>
+	</div></childs>
+	<div class="clear"></div>
+</mc:sp></div>
+<meta:include src="footer.htm"></meta:include>

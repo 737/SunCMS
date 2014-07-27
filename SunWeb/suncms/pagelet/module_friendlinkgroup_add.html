@@ -1,0 +1,58 @@
+﻿    <div class="ad" id='vm_friendlinkgroupAdd'>
+        <table class="sun-title">
+            <tr>
+                <td class="subject">
+                    <a href="javascript:void(0)" data-bind='click: $root.onGoback' target="_self">友情链接分组管理</a><span class="fw">&nbsp;&gt;&gt;&nbsp;链接操作</span>
+                </td>
+            </tr>
+        </table>
+        <table class="sun-edit">
+            <tr>
+                <td class="span2">分组名称：</td>
+                <td>
+                    <input type="text" id='FriendLink_Subject' class="span3" data-bind='value:subject' />
+                    <span class='help-inline error hide'>不可为空！</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">网站简况：</td>
+                <td>
+                    <textarea rows="4" cols="3" class="span4" data-bind='value:description'></textarea>
+                </td>
+            </tr>
+        </table>
+        <table class="sun-update">
+            <tr>
+                <td id="tip">
+                    <dl>
+                        <dt>SunCMS提示:</dt>
+                        <dd>1.目前data、uploads有执行.php权限，非常危险，需要立即取消目录的执行权限</dd>
+                        <dd>2.默认管理目录为dede，需要立即将它更名；</dd>
+                        <dd>3.强烈建议data/common.inc.php文件属性设置为644（Linux/Unix）或只读（NT）</dd>
+                        <dd>4.没有更改默认管理员名称admin，建议您修改为其他管理账号！没有更改默认管理员名称admin，建议您修改为其他管理账号！</dd>
+                        <dd>5.强烈建议将data目录搬移到Web根目录以外；查看如何搬迁</dd>
+                    </dl>
+                </td>
+                <td id="action">
+                    <ul>
+                        <li class="loading" style="display: none;">
+                            <!--TODO::将图片换成背景图片，以防每次都请求-->
+                            <img alt="loading" src="style/default/images/loading_1.gif" />
+                        </li>
+                        <li class="button">
+                            <input type="button" data-bind='click: $root.onSubmit' class="ok" value="" />
+                            <input type="reset" name="reset" class="reset" value="" />
+                            <input type="button" class="back" data-bind='click: $root.onGoback' value="" />
+                        </li>
+                        <li class="message">
+                            <div style="display: none">
+                                <strong>SunCMS&nbsp;提示信息:&nbsp;</strong>
+                                <span class="info">成功更改站点配置！</span>
+                                <input type="button" class="close" title="关闭" value="" />
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>

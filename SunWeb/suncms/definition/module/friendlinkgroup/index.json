@@ -1,0 +1,33 @@
+{
+    "State": true,
+    "MessageDetail": null,
+    "Data": {
+        "friendLinkGroup": [
+            {
+                "id": 5,
+                "subject": "其它",
+                "description": "aaa"
+            },
+            {
+                "id": 4,
+                "subject": "兄弟链接",
+                "description": "1234"
+            },
+            {
+                "id": 3,
+                "subject": "内面",
+                "description": "5435"
+            },
+            {
+                "id": 2,
+                "subject": "首页链接",
+                "description": "1234"
+            },
+            {
+                "id": 1,
+                "subject": "默认11",
+                "description": "11"
+            }
+        ]
+    }
+}

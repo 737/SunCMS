@@ -1,0 +1,17 @@
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Entity.dll
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Entity.pdb
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Entity\obj\Debug\Sun.Entity.dll
+C:\Alex.Li\Sun\SunCMS\SunCode\Sun.Entity\obj\Debug\Sun.Entity.pdb
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Entity.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Entity.pdb
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Util.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Toolkit.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Newtonsoft.Json.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.pdb
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Util.pdb
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Sun.Toolkit.pdb
+D:\workplace\SunCMS\SunCode\Sun.Entity\bin\Debug\Newtonsoft.Json.xml
+D:\workplace\SunCMS\SunCode\Sun.Entity\obj\Debug\Sun.Entity.csprojResolveAssemblyReference.cache
+D:\workplace\SunCMS\SunCode\Sun.Entity\obj\Debug\Sun.Entity.dll
+D:\workplace\SunCMS\SunCode\Sun.Entity\obj\Debug\Sun.Entity.pdb

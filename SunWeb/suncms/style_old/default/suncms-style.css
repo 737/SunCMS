@@ -1,0 +1,121 @@
+﻿@charset "utf-8";
+/*!
+ * SunCMS-Style v1.0.1
+ *
+ * Copyright 2012 SunCMS, Inc
+ * Licensed under the IIS6.0
+ * url
+ *
+ * Designed and built with all the love in the world @twitter by SunCMS.
+ */
+
+
+#main_wrap { width: 100%; height: 100%; margin-bottom: 20px; background-color: #EFF5ED; }
+    #main_wrap th,
+    #main_wrap td { line-height: 20px; text-align: left; vertical-align: top; }
+
+/************************************************ header  ************************************************/
+#headerFrame { height: 66px; background-color: #71A302; color: #fff; }
+
+/************************************************ /header  ************************************************/
+
+
+/************************************************ left  ************************************************/
+#leftFrame { width: 212px; background-color: #F7F7F7; }
+
+#menu_wrap { width: 188px; padding-left: 3px; padding-bottom: 7px; background: url(images/menu_detail_bg_foot.gif) no-repeat 30px bottom; }
+#menu_sections { width: 27px; float: left; font-weight: bold; padding-top: 10px; }
+    #menu_sections li { background: url(images/menu_section.gif) no-repeat; padding: 5px 4px 6px 10px; word-wrap: break-word; word-break: break-all; cursor: pointer; }
+        #menu_sections li.cur { background: url(images/menu_section_select.gif); }
+
+
+#menu_detail_wrap { width: 160px; min-height: 360px; padding-top: 8px; float: left; background: url(images/menu_detail_bg.gif) repeat-y; }
+.menu-detail-section { }
+/*菜单-标题*/
+.menu-detail-subItem { background: url(images/menu_detail_title.gif) no-repeat; width: 140px; margin: 0px 0px 5px 12px; }
+    .menu-detail-subItem.fold { background: url(images/menu_detail_title_fold.gif) no-repeat; }
+    .menu-detail-subItem dt { height: 25px; line-height: 25px; padding-left: 35px; cursor: pointer; }
+    .menu-detail-subItem dd { padding: 3px 3px 3px 3px; background-color: #fff; }
+.menu-detail-siteMenu { padding-top: 3px; width: 118px; }
+    .menu-detail-siteMenu li { padding: 0px 0px 0px 18px; line-height: 22px; background: url(images/icons_point.gif) no-repeat 5px 9px; }
+        .menu-detail-siteMenu li .menu-detail-siteMenu-icon { float: right; padding-top: 5px; }
+
+
+/************************************************ /left  ************************************************/
+
+
+/************************************************ main  ************************************************/
+#mainFrame { padding: 8px; background-color: #fff; }
+
+/* home */
+.home-body { padding: 10px; }
+
+/*--- content box ---*/
+.container-wrap { border: 1px solid #C7CCD1; }
+
+.container-title { padding: 9px; background-color: #F7F7F9; margin: 1px 1px 0px; }
+
+.container-content { margin: 0 10px 10px; }
+    .container-content .container-row { margin: 5px 0 0; line-height: 30px; }
+
+/*--- /content box ---*/
+/* /home */
+/************************************************ /main  ************************************************/
+#footerFrame { height: 23px; background-color: #ff6a00; }
+
+
+
+/************************************************ page  ************************************************/
+.page-box { border: #D6D6D6 1px solid; }
+    .page-box .title { padding: 6px 10px; height: 22px; font-weight: bold; background: url(images/box-bg.gif) 0 0px repeat-x; border-bottom: #D6D6D6 1px solid; }
+    .page-box .title-menu { padding: 3px 10px; height: 22px; font: bold 12px/20px ""; background: url(images/box-bg.gif) 0 0px repeat-x; }
+    .page-box .label { background-color:#FBFCE2; }
+    .page-box .odd { background-color:#FFF; }
+    .page-box .even { background-color:#F9FCEF; }
+    .page-box .submit { height:24px; padding:14px; background-color:#F9FCEF; border-top:  #D6D6D6 1px solid; text-align:center; }
+        .page-box .submit img { padding:0 20px; }
+
+
+.page-home { padding-right: 12px; padding-left: 4px; }
+    .page-home ul { margin: 8px 8px 15px; }
+.page-home-welcome { height: 20px; background: url(images/separation_bg.gif) 0 19px no-repeat; text-indent: 16px; }
+.page-home-message { }
+    .page-home-message .left { float: left; width: 49.5%; }
+    .page-home-message .right { float: right; width: 49.5%; }
+.page-home-box { border: 1px solid #DEEAB6; margin-top: 8px; }
+    .page-home-box .title { height: 28px; line-height: 28px; text-indent: 8px; font-weight: bold; color: #4D6C2F; background: url(images/title_bg.gif) repeat-x; border-bottom: 1px solid #CFD7C4; }
+        .page-home-box .title .l { float: left; }
+        .page-home-box .title .r { float: right; margin-right: 8px; }
+    .page-home-box .safemsg li { height: 22px; }
+    .page-home-box .info { padding-left: 30px; }
+        .page-home-box .info li { height: 27px; line-height: 27px; }
+            .page-home-box .info li .inline { padding-left: 25px; }
+            .page-home-box .info li span { width: 68px; display: inline-block; }
+    .page-home-box .ad { display: inline-block; width: 100%; margin: 8px 8px 15px; }
+        .page-home-box .ad li { text-align: center; height: 27px; line-height: 27px; }
+            .page-home-box .ad li span { width: 49%; display: inline-block; }
+    .page-home-box .shortcut { display: inline-block; margin: 8px 8px 15px; width: 95%; }
+        .page-home-box .shortcut li { display: inline; float: left; width: 95px; height: 27px; line-height: 27px; overflow: hidden; }
+            .page-home-box .shortcut li img { float: left; padding: 8px 7px 0 8px; }
+
+.page-system { }
+    .page-system .menu { display: table; margin: 10px auto; text-align: center; padding: 2px; }
+        .page-system .menu li { float: left; width: 70px; }
+            .page-system .menu li span { float: right; }
+
+    .page-system .list { }
+        .page-system .list dt { line-height:23px; display: table; width: 100%; border-top: #D6D6D6 1px solid;  }
+        .page-system .list dd { line-height:23px; display: table; width: 100%; border-top: #D6D6D6 1px solid; }
+        .page-system .list span { padding:3px; display: inline-block; }
+                .page-system .list span.name { width: 300px; text-align: center; float: left;border-right: #D6D6D6 1px solid;  }
+                .page-system .list span.variable { width: 200px; text-align: center; float: right;border-left: #D6D6D6 1px solid;  }
+
+
+
+/* global */
+.page-global { background-color: #f00; }
+/* /global */
+
+
+/************************************************ /page  ************************************************/
+

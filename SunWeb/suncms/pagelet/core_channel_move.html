@@ -1,0 +1,60 @@
+﻿    <div class="ad" id='vm_core_archive_move'>
+        <table class="sun-title">
+            <tr>
+                <td class="subject">
+                    <a href='javascript:void(0)' data-bind='click: $root.onGoback' target="_self">文章列表</a><span class="fw">&nbsp;&gt;&gt;&nbsp;更新文档</span>
+                </td>
+            </tr>
+        </table>
+        <table id='table_tab_common' class="sun-edit">
+            <tr>
+                <td class="span2">栏目路径：</td>
+                <td>
+                    <label data-bind='text: $root.path()' /><label class='padding-left20 color-darkkhaki  fb'>[注：符号“/”最后一段为选中的栏目]</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">栏目ID：</td>
+                <td>
+                    <span data-bind='text: currentChannel.id'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="span2">你希望移动到的那个栏目：</td>
+                <td>
+                    <select id='dom_channel' style="width:200px" data-bind='options: channel, optionsValue:"id", optionsText:"subject" '></select>
+                </td>
+            </tr>
+        </table>
+        <table class="sun-update">
+            <tr>
+                <td id="tip">
+                    <dl>
+                        <dt>SunCMS提示:</dt>
+                        <dd class='fb'>1.移动目录时不会删除原来已创建的列表，移动后需重新对栏目创建HTML。</dd>
+                        <dd>2.不允许从父级移动到子级目录，只允许子级到更高级或同级或不同父级的情况。</dd>
+                    </dl>
+                </td>
+                <td id="action">
+                    <ul>
+                        <li class="loading" style="display: none;">
+                            <!--TODO::将图片换成背景图片，以防每次都请求-->
+                            <img alt="loading" src="style/default/images/loading_1.gif" />
+                        </li>
+                        <li class="button">
+                            <input type="button" data-bind='click:$root.onUpdate' class="ok" value="" />
+                            <input type="reset" name="reset" class="reset" value="" />
+                            <input type="button" class="back" data-bind='click: $root.onGoback' value="" />
+                        </li>
+                        <li class="message">
+                            <div style="display: none">
+                                <strong>SunCMS&nbsp;提示信息:&nbsp;</strong>
+                                <span class="info">成功更改站点配置！</span>
+                                <input type="button" class="close" title="关闭" value="" />
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>

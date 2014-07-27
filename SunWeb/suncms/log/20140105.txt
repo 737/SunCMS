@@ -1,0 +1,48 @@
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------groupName
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------groupName
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  1/5/2014 8:20:33 PM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=16
+message:   --------groupName
+-------------------------------------------------------
+

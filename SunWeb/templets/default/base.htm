@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>[@subject&d: - ][@channelname&d: - ][@s:sitetitle]</title>
+    
+    <link rel="stylesheet" type="text/css" href="[@u:path]css/base.css" />   
+    
+<script type="text/javascript"  >
+function getust(un)
+{
+   if ( un==""){
+       window.document.getElementById ("login").style.display ="block"; 
+   }else{
+        window.document.getElementById ("loged").style.display ="block";  
+         window.document.getElementById ("u").innerText =un;
+   }
+}
+
+</script>
+</head>
+<body>
+<div id="top">
+	<span class="l"><a  onclick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.sxcms.com');" href="#"  >设为首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:window.external.AddFavorite(location.href,document.title);" >加入收藏</a></span>
+	
+	<mc:Entr fun='getust'></mc:Entr>
+</div>
+    <div id="head">
+    
+     <span class="l"><a href="[@baseurl]/">
+            <img src="[@u:path]img/logo.gif" alt="[@s:sitetitle]" /></a></span>
+    </div> 
