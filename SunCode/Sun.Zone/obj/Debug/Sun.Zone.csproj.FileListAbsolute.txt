@@ -7,3 +7,7 @@ D:\workplace\SunCMS\SunCode\Sun.Zone\bin\Debug\Sun.Zone.pdb
 D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.dll
 D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.pdb
 D:\workplace\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.csprojResolveAssemblyReference.cache
+D:\app\SunCMS\SunCode\Sun.Zone\bin\Debug\Sun.Zone.dll
+D:\app\SunCMS\SunCode\Sun.Zone\bin\Debug\Sun.Zone.pdb
+D:\app\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.dll
+D:\app\SunCMS\SunCode\Sun.Zone\obj\Debug\Sun.Zone.pdb

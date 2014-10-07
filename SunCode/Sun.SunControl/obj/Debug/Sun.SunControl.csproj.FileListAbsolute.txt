@@ -21,3 +21,15 @@ D:\workplace\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.csprojResolv
 D:\workplace\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.dll
 D:\workplace\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.pdb
 D:\workplace\SunCMS\SunCode\Sun.SunControl\bin\Debug\Newtonsoft.Json.xml
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.SunControl.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.SunControl.pdb
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.Util.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Newtonsoft.Json.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.Toolkit.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.Util.pdb
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.pdb
+D:\app\SunCMS\SunCode\Sun.SunControl\bin\Debug\Sun.Toolkit.pdb
+D:\app\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.csprojResolveAssemblyReference.cache
+D:\app\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.dll
+D:\app\SunCMS\SunCode\Sun.SunControl\obj\Debug\Sun.SunControl.pdb

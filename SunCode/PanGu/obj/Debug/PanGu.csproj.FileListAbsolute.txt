@@ -12,3 +12,9 @@ D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.csproj.GenerateResource.Cache
 D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.dll
 D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.pdb
 D:\workplace\SunCMS\SunCode\PanGu\obj\Debug\PanGu.csprojResolveAssemblyReference.cache
+D:\app\SunCMS\Bin\Debug\PanGu.dll
+D:\app\SunCMS\Bin\Debug\PanGu.pdb
+D:\app\SunCMS\SunCode\PanGu\obj\Debug\PanGu.AnalyzerResource.resources
+D:\app\SunCMS\SunCode\PanGu\obj\Debug\PanGu.csproj.GenerateResource.Cache
+D:\app\SunCMS\SunCode\PanGu\obj\Debug\PanGu.dll
+D:\app\SunCMS\SunCode\PanGu\obj\Debug\PanGu.pdb

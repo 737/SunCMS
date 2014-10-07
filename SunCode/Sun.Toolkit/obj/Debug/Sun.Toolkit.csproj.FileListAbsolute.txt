@@ -5,3 +5,7 @@ D:\workplace\SunCMS\SunCode\Sun.Toolkit\bin\Debug\Newtonsoft.Json.xml
 D:\workplace\SunCMS\SunCode\Sun.Toolkit\obj\Debug\Sun.Toolkit.dll
 D:\workplace\SunCMS\SunCode\Sun.Toolkit\obj\Debug\Sun.Toolkit.pdb
 D:\workplace\SunCMS\SunCode\Sun.Toolkit\obj\Debug\Sun.Toolkit.csprojResolveAssemblyReference.cache
+D:\app\SunCMS\SunCode\Sun.Toolkit\bin\Debug\Sun.Toolkit.dll
+D:\app\SunCMS\SunCode\Sun.Toolkit\bin\Debug\Sun.Toolkit.pdb
+D:\app\SunCMS\SunCode\Sun.Toolkit\obj\Debug\Sun.Toolkit.dll
+D:\app\SunCMS\SunCode\Sun.Toolkit\obj\Debug\Sun.Toolkit.pdb

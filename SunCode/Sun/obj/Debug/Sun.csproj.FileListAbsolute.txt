@@ -17,3 +17,13 @@ D:\workplace\SunCMS\SunCode\Sun\bin\Debug\Newtonsoft.Json.xml
 D:\workplace\SunCMS\SunCode\Sun\obj\Debug\Sun.csprojResolveAssemblyReference.cache
 D:\workplace\SunCMS\SunCode\Sun\obj\Debug\Sun.dll
 D:\workplace\SunCMS\SunCode\Sun\obj\Debug\Sun.pdb
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.dll
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.pdb
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.Toolkit.dll
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.Util.dll
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Newtonsoft.Json.dll
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.Toolkit.pdb
+D:\app\SunCMS\SunCode\Sun\bin\Debug\Sun.Util.pdb
+D:\app\SunCMS\SunCode\Sun\obj\Debug\Sun.csprojResolveAssemblyReference.cache
+D:\app\SunCMS\SunCode\Sun\obj\Debug\Sun.dll
+D:\app\SunCMS\SunCode\Sun\obj\Debug\Sun.pdb
