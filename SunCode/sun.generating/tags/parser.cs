@@ -7,7 +7,7 @@ namespace sun.generating.tags
 {
     public abstract class parser
     {
-        private string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>((?<Nested><\k<namespace>:(\k<tag>>|\k<tag>\s+[^>]*>))|</\k<namespace>:\k<tag>>(?<-Nested>)|.*?)*)(</\k<namespace>:\k<tag>>|\z))";
+        
         protected string htmlText;
 
         private string __expression;
@@ -80,11 +80,12 @@ namespace sun.generating.tags
         /// </summary>
         public virtual string renderChildren(string html)
         {
+            string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>((?<Nested><\k<namespace>:(\k<tag>>|\k<tag>\s+[^>]*>))|</\k<namespace>:\k<tag>>(?<-Nested>)|.*?)*)(</\k<namespace>:\k<tag>>|\z))";
             formatExternal fmExternal = new formatExternal();
 
             if (!string.IsNullOrEmpty(html))
             {
-                Regex reg = new Regex(this._pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                Regex reg = new Regex(_pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
                 List<iInterpreter> interpreterList = new List<iInterpreter>();
 
                 fmExternal.add("global", Sun.configSystem.getConfig());
