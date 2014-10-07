@@ -81,15 +81,17 @@ namespace sun.generating.tags
         public virtual string renderChildren(string html)
         {
             string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>((?<Nested><\k<namespace>:(\k<tag>>|\k<tag>\s+[^>]*>))|</\k<namespace>:\k<tag>>(?<-Nested>)|.*?)*)(</\k<namespace>:\k<tag>>|\z))";
-            formatExternal fmExternal = new formatExternal();
 
             if (!string.IsNullOrEmpty(html))
             {
                 Regex reg = new Regex(_pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
                 List<iInterpreter> interpreterList = new List<iInterpreter>();
 
+                // 解释全局标签
+                formatExternal fmExternal = new formatExternal();
                 fmExternal.add("global", Sun.configSystem.getConfig());
                 html = fmExternal.format(html, "global");
+
                 if (this.currentData != null)
                 {
                     fmExternal.add("menu", this.currentData);
@@ -98,7 +100,6 @@ namespace sun.generating.tags
 
                 for (Match match = reg.Match(html); match.Success; match = match.NextMatch())
                 {
-
                     string _namespace = match.Groups["namespace"].Value;
                     string _tag = match.Groups["tag"].Value;
                     string attribute = match.Groups["attribute"].Value;

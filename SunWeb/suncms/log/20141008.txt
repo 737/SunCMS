@@ -1,0 +1,64 @@
+-------------------------------------------------------
+datetime:  10/8/2014 12:53:03 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 12:53:03 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------groupName
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 12:53:03 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 12:53:03 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------groupName
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 1:00:16 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 1:00:16 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------groupName
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 1:00:16 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------subject
+-------------------------------------------------------
+
+-------------------------------------------------------
+datetime:  10/8/2014 1:00:16 AM
+username:  null
+ip:        ::1
+url:       http://localhost:17140/templets/aspx/list.aspx?channelId=10
+message:   --------groupName
+-------------------------------------------------------
+

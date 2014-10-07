@@ -9,7 +9,8 @@ using System.Collections;
 namespace sun.generating
 {
     /// <summary>
-    /// // 格式化 sun:context 和 sun: global属性
+    /// // 格式化额外的字段，全已有字段或上下文字段
+    /// // 格式化 sun:context 和 sun:global属性
     /// </summary>
     public class formatExternal
     {
@@ -42,11 +43,17 @@ namespace sun.generating
             }
         }
 
+        /// <summary>
+        /// // 增加对应的字段和值
+        /// </summary>
+        /// <param name="prefix">字段</param>
+        /// <param name="obj">值</param>
         public void add(string prefix, object obj)
         {
             string key = "";
             object val = "";
             bool flag = true;
+
             if (obj == null)
             {
                 return;
@@ -91,6 +98,7 @@ namespace sun.generating
         public string getValue(string key)
         {
             var val = "";
+
             key = key.ToLower().Trim();
             if (!string.IsNullOrEmpty(key) && this.__dicts.ContainsKey(key))
             {
