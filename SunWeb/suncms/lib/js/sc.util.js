@@ -46,7 +46,7 @@ sc.util.formatIntNum = function (amtStr) {
 }
 
 /**
- * format number of money.
+ * format number of money  格式化钱.
  * e.g. 12000.235 => 12,000.24
  * @param amtStr number
  * @return string
@@ -91,6 +91,7 @@ sc.util.formatFloat = function (amtStr, isCurrency) {
 
 
 sc.util.transforTime = function (time) {
+    // 写一个注意  parseInt
     var date = parseInt(time);
     var weekdays = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
