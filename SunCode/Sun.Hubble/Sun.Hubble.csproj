@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClownFish">
-      <HintPath>..\..\SunWeb\Bin\ClownFish.dll</HintPath>
+      <HintPath>..\..\packages\ClownFish.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
