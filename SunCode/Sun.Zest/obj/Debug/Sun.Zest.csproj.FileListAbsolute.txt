@@ -1,4 +1,0 @@
-D:\workplace\SunCMS\SunCode\Sun.Zest\bin\Debug\Sun.Zest.exe
-D:\workplace\SunCMS\SunCode\Sun.Zest\bin\Debug\Sun.Zest.pdb
-D:\workplace\SunCMS\SunCode\Sun.Zest\obj\Debug\Sun.Zest.exe
-D:\workplace\SunCMS\SunCode\Sun.Zest\obj\Debug\Sun.Zest.pdb
