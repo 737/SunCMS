@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sun.generating.tags
 {
-    public class emptyTag : iInterpreter
+    public class emptyTag : ITagInterpreter
     {
 
         public void addAttribute(string name, string value)
@@ -48,7 +48,7 @@ namespace sun.generating.tags
         }
 
 
-        public template contextTemplate
+        public Template contextTemplate
         {
             get
             {
@@ -61,7 +61,7 @@ namespace sun.generating.tags
         }
 
 
-        parser iInterpreter.context
+        Parser ITagInterpreter.context
         {
             get
             {

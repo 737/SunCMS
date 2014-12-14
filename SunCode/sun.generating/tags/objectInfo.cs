@@ -8,7 +8,7 @@ namespace sun.generating.tags
 {
     public class objectInfo : iObjectProvider
     {
-        private tags.attributes _attributes;
+        private tags.Attributes _attributes;
         private object _provider;
 
         private string __provider;
@@ -45,7 +45,7 @@ namespace sun.generating.tags
         }
 
 
-        public objectInfo(tags.attributes attr)
+        public objectInfo(tags.Attributes attr)
         {
             this._attributes = attr;
             this._provider = Sun.assemblies.getAssembly(this.provider);

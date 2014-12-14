@@ -47,7 +47,7 @@ namespace sun.generating.tags
         }
 
 
-        public template contextTemplate
+        public Template contextTemplate
         {
             get
             {

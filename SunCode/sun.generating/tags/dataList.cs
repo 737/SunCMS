@@ -117,18 +117,19 @@ namespace sun.generating.tags
                     return "";
                 }
 
-                IList source = this.parseToIList(currentData);
-                if ((source != null) && (source.Count > 0))
+                IList dataList = this.parseToIList(currentData);
+                if ((dataList != null) && (dataList.Count > 0))
                 {
-                    int max = source.Count;
+                    int max = dataList.Count;
                     for (int i = 0; i < max; i++)
                     {
-                        var itemData = source[i];
+                        var itemData = dataList[i];
                         string itemHtml = this.itemFormat;
 
                         //分部写 start
                         var tag = base.createTag(itemData, null, itemHtml);
                         itemHtml = tag.render();
+
                         //替换[@rowIndex]=>代表的是当前是第几行
                         Regex _otherTag = new Regex(@"\[@rowIndex\]", RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
                         itemHtml = _otherTag.Replace(itemHtml, (i + 1).ToString());
@@ -147,6 +148,7 @@ namespace sun.generating.tags
             {
                 return "数据错误__dataList.css__render()" + this.GetType().FullName + ex.Message;
             }
+
             return html;
         }
         #endregion

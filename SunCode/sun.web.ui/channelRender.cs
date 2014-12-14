@@ -12,7 +12,7 @@ namespace sun.web.ui
     [ToolboxData("<{0}:channelRender runat=server></{0}:channelRender>")]
     public class channelRender : WebControl
     {
-        private static void setContextItem(Sun.Entity.Pagelet.EntityChannel channel, template tmp)
+        private static void setContextItem(Sun.Entity.Pagelet.EntityChannel channel, Template tmp)
         {
             if (channel != null)
             {
@@ -31,23 +31,23 @@ namespace sun.web.ui
         {
             Sun.API.Pagelet.ApiChannel apiChannels = new Sun.API.Pagelet.ApiChannel();
 
-            var pid = Sun.Toolkit.context.getValueToInt("channelId");
+            var channelId = Sun.Toolkit.context.getValueToInt("channelId");
             var html = "";
 
-            if (pid == null)
+            if (channelId == null)
             {
                 html = "栏目传参不正确!";
             }
             else
             {
-                Sun.Entity.Pagelet.EntityChannel channel = apiChannels.getChannelWithChildrenById(pid);
+                Sun.Entity.Pagelet.EntityChannel entChannel = apiChannels.getChannelWithChildrenById(channelId);
 
-                if ((channel != null) && (!string.IsNullOrEmpty(channel.templateList)))
+                if ((entChannel != null) && (!string.IsNullOrEmpty(entChannel.templateList)))
                 {
-                    template tmp = new template(templateHelper.getTemplatePath(channel.templateList));
+                    Template tmp = new Template(templateHelper.getTemplatePath(entChannel.templateList));
 
-                    tmp.currentData = channel;
-                    setContextItem(channel, tmp);
+                    tmp.currentData = entChannel;
+                    //setContextItem(entChannel, tmp);
                     html = tmp.render();
                 }
                 else

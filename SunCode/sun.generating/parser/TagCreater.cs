@@ -7,11 +7,11 @@ using Sun;
 
 namespace sun.generating.tags
 {
-    public class tagCreater
+    public class TagCreater
     {
         private Type _tagType;
 
-        public tagCreater(string tagKey)
+        public TagCreater(string tagKey)
         {
             string[] strArray = tagKey.Split(new char[] { ':' });
             string nameSpace, tag;
@@ -45,22 +45,22 @@ namespace sun.generating.tags
             }
 
         }
-        public tagCreater(Type tagType)
+        public TagCreater(Type tagType)
         {
             this._tagType = tagType;
         }
 
-        public iInterpreter createInterpreter(string attributes, string html)
+        public ITagInterpreter createInterpreter(string attributes, string innerHtml)
         {
             if (this._tagType == null)
             {
                 return new emptyTag();
             }
-            
 
-            var interpreter = this._tagType.Assembly.CreateInstance(this._tagType.FullName, true, System.Reflection.BindingFlags.CreateInstance, null, new object[] { attributes, html }, null, null);
 
-            return (iInterpreter)interpreter;
+            var tagsInterpreter = this._tagType.Assembly.CreateInstance(this._tagType.FullName, true, System.Reflection.BindingFlags.CreateInstance, null, new object[] { attributes, innerHtml }, null, null);
+
+            return (ITagInterpreter)tagsInterpreter;
         }
     }
 }

@@ -41,19 +41,19 @@
   <ItemGroup>
     <Compile Include="context.cs" />
     <Compile Include="formatExternal.cs" />
-    <Compile Include="iInterpreter.cs" />
+    <Compile Include="ITagInterpreter.cs" />
     <Compile Include="iObjectProvider.cs" />
-    <Compile Include="tags\attributes.cs" />
+    <Compile Include="tags\Attributes.cs" />
     <Compile Include="tags\dataList.cs" />
     <Compile Include="tags\dataView.cs" />
-    <Compile Include="tags\emptyTag.cs" />
+    <Compile Include="parser\emptyTag.cs" />
     <Compile Include="tags\innerTag.cs" />
     <Compile Include="tags\objectInfo.cs" />
-    <Compile Include="tags\parser.cs" />
+    <Compile Include="parser\Parser.cs" />
     <Compile Include="tags\tag.cs" />
-    <Compile Include="tags\tagCreater.cs" />
+    <Compile Include="parser\TagCreater.cs" />
     <Compile Include="tags\view.cs" />
-    <Compile Include="template.cs" />
+    <Compile Include="Template.cs" />
     <Compile Include="templateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

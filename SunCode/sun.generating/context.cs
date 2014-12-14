@@ -9,9 +9,9 @@ namespace sun.generating
 {
     public static class context
     {
-        private static template meTempalte;
+        private static Template meTempalte;
 
-        private static string getValueByKey(template tmp, string key)
+        private static string getValueByKey(Template tmp, string key)
         {
             string txt = "";
 
@@ -40,7 +40,7 @@ namespace sun.generating
             return "___tagpasdfasdfrefix";
         }
 
-        public static string replaceForPrefix(string prefix, string text, template tmp)
+        public static string replaceForPrefix(string prefix, string text, Template tmp)
         {
             if (string.IsNullOrEmpty(text))
             {

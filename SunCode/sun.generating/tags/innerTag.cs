@@ -31,16 +31,16 @@ namespace sun.generating.tags
 
         public tag createTag(object obj, string sAttributes, string html)
         {
-            attributes attributes = new attributes(sAttributes);
+            Attributes attributes = new Attributes(sAttributes);
             string str = attributes["tag"];
-            tagCreater creater = null;
+            TagCreater creater = null;
             if (!string.IsNullOrEmpty(str))
             {
-                creater = new tagCreater(str);
+                creater = new TagCreater(str);
             }
             else
             {
-                creater = new tagCreater(this.getTagTypeForChildObject(obj));
+                creater = new TagCreater(this.getTagTypeForChildObject(obj));
             }
             if (string.IsNullOrEmpty(html))
             {

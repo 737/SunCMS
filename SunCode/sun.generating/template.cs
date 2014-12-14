@@ -6,11 +6,11 @@ using sun.generating.tags;
 
 namespace sun.generating
 {
-    public class template : parser
+    public class Template : Parser
     {
 
 
-        public template(string templetePath)
+        public Template(string templetePath)
         {
             try
             {

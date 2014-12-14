@@ -13,7 +13,7 @@ namespace sun.web.ui
     [ToolboxData("<{0}:contentRender runat=server></{0}:contentRender>")]
     public class contentRender : WebControl
     {
-        private static void setEntityChannelToContext(Sun.Entity.Pagelet.EntityChannel entChannel, template tmp)
+        private static void setEntityChannelToContext(Sun.Entity.Pagelet.EntityChannel entChannel, Template tmp)
         {
             if (entChannel != null)
             {
@@ -45,7 +45,7 @@ namespace sun.web.ui
 
                 if (!string.IsNullOrEmpty(entChannel.templateBody))
                 {
-                    template tmp = new template(templateHelper.getTemplatePath(entChannel.templateBody));
+                    Template tmp = new Template(templateHelper.getTemplatePath(entChannel.templateBody));
 
                     tmp.currentData = entChannel;
                     tmp.attributes.add("archiveId", archiveId.ToString());

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sun.generating.tags
 {
-    public abstract class tag : parser, iInterpreter
+    public abstract class tag : Parser, ITagInterpreter
     {
         public tag() { }
         public tag(string exp) : base(exp) { }
@@ -25,8 +25,8 @@ namespace sun.generating.tags
             }
         }
 
-        private parser __context;
-        public parser context
+        private Parser __context;
+        public Parser context
         {
             get
             {
@@ -38,7 +38,7 @@ namespace sun.generating.tags
             }
             set
             {
-                this.__context = value as parser;
+                this.__context = value as Parser;
             }
         }
 

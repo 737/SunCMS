@@ -89,6 +89,7 @@ namespace Sun.API.Pagelet
 
             return Sun.Hubble.DataHelper.SetExecuteNonQuery(query);
         }
+
         // 返回 处理后的栏目  就是将栏目 合成 栏目管理 的格式。
         private List<EntityChannel> getDealedChannels()
         {
@@ -118,6 +119,7 @@ namespace Sun.API.Pagelet
 
             return father;
         }
+
         // 根据id返回对应栏目 分级
         private EntityChannel _filterChannelById = null;
         private EntityChannel filterChannelById(List<EntityChannel> father, int? id)
@@ -183,6 +185,7 @@ namespace Sun.API.Pagelet
 
             return this.__getChannelsWithChildrenById(cn, channels);
         }
+
         /// <summary>
         /// // 返回此栏目以级子栏目     分级
         /// </summary>

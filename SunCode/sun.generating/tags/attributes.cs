@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace sun.generating.tags
 {
-    public sealed class attributes : NameObjectCollectionBase, ICloneable, IList, ICollection, IEnumerable
+    public sealed class Attributes : NameObjectCollectionBase, ICloneable, IList, ICollection, IEnumerable
     {
         public static readonly string _defaultAtrributeKey = "__defaultInnerHtmlProperty";
         internal static readonly Regex _outRegex = new Regex("\\s*(?<name>[^=]+?)\\s*=\\s*(?<child>['\"\"]?)(?<val>.+?)\\2\\s+", RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
@@ -24,7 +24,7 @@ namespace sun.generating.tags
             }
         }
 
-        internal attributes(string exp)
+        internal Attributes(string exp)
         {
             this.setOutsideHtml(exp);
         }
