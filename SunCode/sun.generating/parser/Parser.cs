@@ -81,7 +81,7 @@ namespace sun.generating.tags
         /// <summary>
         /// // 解析页面的 标签
         /// </summary>
-        public virtual string renderChildren(string html)
+        public string renderChildren(string html)
         {
             //string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>((?<Nested><\k<namespace>:(\k<tag>>|\k<tag>\s+[^>]*>))|</\k<namespace>:\k<tag>>(?<-Nested>)|.*?)*)(</\k<namespace>:\k<tag>>|\z))";
             string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>.*)(</\k<namespace>:\k<tag>>))";

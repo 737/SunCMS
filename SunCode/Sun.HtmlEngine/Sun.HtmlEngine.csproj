@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}</ProjectGuid>
+    <ProjectGuid>{3E608EED-DE3B-46C8-98F2-4526241212F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>sun.web.ui</RootNamespace>
-    <AssemblyName>sun.web.ui</AssemblyName>
+    <RootNamespace>Sun.HtmlEngine</RootNamespace>
+    <AssemblyName>Sun.HtmlEngine</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,28 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="channelRender.cs" />
-    <Compile Include="contentRender.cs" />
-    <Compile Include="pageNotFound.cs" />
+    <Compile Include="ITagParse.cs" />
+    <Compile Include="TagCreater.cs" />
+    <Compile Include="Tags\Parse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tags\ParseList.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="TemplateHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sun.API\Sun.API.csproj">
-      <Project>{e1779362-41a3-487a-a325-1347a9d9cc76}</Project>
-      <Name>Sun.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sun.Entity\Sun.Entity.csproj">
-      <Project>{38d8d3fb-6414-4125-a353-bbbc6c87ca8b}</Project>
-      <Name>Sun.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\sun.generating\sun.generating.csproj">
-      <Project>{d35146e1-e210-4de2-9349-5846b29dd50a}</Project>
-      <Name>sun.generating</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sun.HtmlEngine\Sun.HtmlEngine.csproj">
-      <Project>{3e608eed-de3b-46c8-98f2-4526241212f6}</Project>
-      <Name>Sun.HtmlEngine</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sun.Toolkit\Sun.Toolkit.csproj">
       <Project>{87955659-0c56-45a6-8208-a3d480e2c6f7}</Project>
       <Name>Sun.Toolkit</Name>

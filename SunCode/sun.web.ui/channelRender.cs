@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using sun.generating;
+using Sun.HtmlEngine;
 using System.Reflection;
 
 namespace sun.web.ui
@@ -12,20 +12,20 @@ namespace sun.web.ui
     [ToolboxData("<{0}:channelRender runat=server></{0}:channelRender>")]
     public class channelRender : WebControl
     {
-        private static void setContextItem(Sun.Entity.Pagelet.EntityChannel channel, Template tmp)
-        {
-            if (channel != null)
-            {
-                foreach (PropertyInfo item in channel.GetType().GetProperties())
-                {
-                    string value = item.GetValue(channel, null).ToString();
-                    if ((item.CanRead) && (item.CanWrite))
-                    {
-                        tmp.attributes.add(item.Name, value);
-                    }
-                }
-            }
-        }
+        //private static void setContextItem(Sun.Entity.Pagelet.EntityChannel channel, Template tmp)
+        //{
+        //    if (channel != null)
+        //    {
+        //        foreach (PropertyInfo item in channel.GetType().GetProperties())
+        //        {
+        //            string value = item.GetValue(channel, null).ToString();
+        //            if ((item.CanRead) && (item.CanWrite))
+        //            {
+        //                tmp.attributes.add(item.Name, value);
+        //            }
+        //        }
+        //    }
+        //}
 
         private void generateContent(HtmlTextWriter writer)
         {
@@ -44,9 +44,10 @@ namespace sun.web.ui
 
                 if ((entChannel != null) && (!string.IsNullOrEmpty(entChannel.templateList)))
                 {
-                    Template tmp = new Template(templateHelper.getTemplatePath(entChannel.templateList));
+                    var htmlTtxt = templateHelper.getTemplatePath(entChannel.templateList);
 
-                    tmp.currentData = entChannel;
+                    Template tmp = new Template(htmlTtxt, entChannel);
+
                     //setContextItem(entChannel, tmp);
                     html = tmp.render();
                 }

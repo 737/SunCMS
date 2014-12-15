@@ -43,6 +43,7 @@
     <Compile Include="formatExternal.cs" />
     <Compile Include="ITagInterpreter.cs" />
     <Compile Include="iObjectProvider.cs" />
+    <Compile Include="MakeList.cs" />
     <Compile Include="tags\Attributes.cs" />
     <Compile Include="tags\dataList.cs" />
     <Compile Include="tags\dataView.cs" />
