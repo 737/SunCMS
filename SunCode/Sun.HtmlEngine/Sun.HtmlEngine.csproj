@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITagParse.cs" />
-    <Compile Include="TagCreater.cs" />
-    <Compile Include="Tags\Parse.cs" />
+    <Compile Include="Tags\ITag.cs" />
+    <Compile Include="Tags\TagCreater.cs" />
+    <Compile Include="TemplateParse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tags\ParseList.cs" />
     <Compile Include="Template.cs" />

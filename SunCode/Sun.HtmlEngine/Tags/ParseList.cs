@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sun.HtmlEngine.Tags
 {
-    public abstract class ParseList : ITagParse
+    public abstract class ParseList : ITag
     {
         private string attributes;
         private string innerHtml;
@@ -44,6 +44,8 @@ namespace Sun.HtmlEngine.Tags
 
                     html = html + _itemHtml;
                 }
+
+                html += Sun.Toolkit.JSON.stringify(this.attributes);
             }
 
             return html;

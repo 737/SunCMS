@@ -47,7 +47,7 @@ namespace Sun.HtmlEngine.Tags
         }
 
 
-        public ITagParse createParser(string attributes, string innerHtml)
+        public ITag createParser(string attributes, string innerHtml)
         {
             if (this.tagType == null)
             {
@@ -56,7 +56,7 @@ namespace Sun.HtmlEngine.Tags
 
             var tagsInterpreter = this.tagType.Assembly.CreateInstance(this.tagType.FullName, true, System.Reflection.BindingFlags.CreateInstance, null, new object[] { attributes, innerHtml }, null, null);
 
-            return (ITagParse)tagsInterpreter;
+            return (ITag)tagsInterpreter;
         }
     }
 }

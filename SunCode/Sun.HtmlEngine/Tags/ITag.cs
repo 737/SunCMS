@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sun.HtmlEngine
+namespace Sun.HtmlEngine.Tags
 {
-    public interface ITagParse
+    public interface ITag
     {
         string expresstion { set; get; }
 

@@ -17,6 +17,11 @@ namespace Sun.Toolkit
             return Newtonsoft.Json.JsonConvert.SerializeObject(obj);
         }
 
+        public static string stringify(object obj)
+        {
+            return PackData(obj);
+        }
+
         public static string GetJSON(object obj)
         {
             return (PackData(obj));

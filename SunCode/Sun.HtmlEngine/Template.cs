@@ -7,7 +7,7 @@ using Sun.HtmlEngine.Tags;
 
 namespace Sun.HtmlEngine
 {
-    public class Template : Parse
+    public class Template : TemplateParse
     {
         public string _text;
 

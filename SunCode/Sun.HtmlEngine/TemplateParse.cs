@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Sun.HtmlEngine.Tags;
 
-namespace Sun.HtmlEngine.Tags
+namespace Sun.HtmlEngine
 {
-    public abstract class Parse
+    public abstract class TemplateParse
     {
 
         private string parseGlobalTag(string sHtmlText)
@@ -17,7 +18,7 @@ namespace Sun.HtmlEngine.Tags
         }
 
         // 解析HtmlText中所有的 tag
-        private List<ITagParse> parseTags(string sHtmlText)
+        private List<ITag> parseTags(string sHtmlText)
         {
             if (string.IsNullOrEmpty(sHtmlText))
             {
@@ -28,8 +29,8 @@ namespace Sun.HtmlEngine.Tags
 
             Regex reg = new Regex(_pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
 
-            List<ITagParse> tagParsers = new List<ITagParse>();
-            ITagParse parser = null;
+            List<ITag> tagParsers = new List<ITag>();
+            ITag parser = null;
 
             for (Match match = reg.Match(sHtmlText); match.Success; match = match.NextMatch())
             {
@@ -55,20 +56,20 @@ namespace Sun.HtmlEngine.Tags
 
         protected string parseHtml(string sHtmlText)
         {
-            List<ITagParse> tagParsers = this.parseTags(sHtmlText);
+            List<ITag> tagList = this.parseTags(sHtmlText);
 
             var html = "";
             
-            foreach (var parser in tagParsers)
+            foreach (var tag in tagList)
             {
-                html = sHtmlText.Replace(parser.expresstion, parser.render());
+                html = sHtmlText.Replace(tag.expresstion, tag.render());
             }
 
-            for (int i = 0; i < tagParsers.Count; i++)
+            for (int i = 0; i < tagList.Count; i++)
             {
-                tagParsers[i] = null;
+                tagList[i] = null;
             }
-            tagParsers = null;
+            tagList = null;
 
             return html;
         }
