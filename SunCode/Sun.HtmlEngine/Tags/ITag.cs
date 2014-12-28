@@ -10,6 +10,8 @@ namespace Sun.HtmlEngine.Tags
     {
         string expresstion { set; get; }
 
+        Attributes attributes {  get; }
+
         string render();
     }
 }

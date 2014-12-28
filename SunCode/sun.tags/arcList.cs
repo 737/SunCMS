@@ -15,11 +15,10 @@ namespace sun.tags
         {
 
             Sun.API.Pagelet.ApiArchive apiArchive = new Sun.API.Pagelet.ApiArchive();
+            
+            int cid = Sun.Toolkit.Parse.ToInt(base.attributes["channelId"], -1);
 
-            //int gid = Sun.Toolkit.Parse.ToInt(base.attributes["channelId"], -1);
-            int gid = Sun.Toolkit.Parse.ToInt(10, -1);
-
-            List<Sun.Entity.Pagelet.EntityArchive> archives = apiArchive.getListByGroupId(gid, true);
+            List<Sun.Entity.Pagelet.EntityArchive> archives = apiArchive.getListByGroupId(cid, true);
 
             return archives;
         }

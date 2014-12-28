@@ -9,22 +9,17 @@ namespace Sun.HtmlEngine.Tags
 {
     public abstract class ParseList : ITag
     {
-        private string attributes;
-        private string innerHtml;
+
+        string innerHtml;
+        Attributes _attributes = null;
 
         public ParseList(string sAttributes, string sInnerHtml)
         {
-            this.attributes = sAttributes;
+            _attributes = new Attributes(sAttributes);
             this.innerHtml = sInnerHtml;
         }
 
         protected abstract IList getCurrentData();
-
-        public string expresstion
-        {
-            set;
-            get;
-        }
 
         public string render()
         {
@@ -45,10 +40,22 @@ namespace Sun.HtmlEngine.Tags
                     html = html + _itemHtml;
                 }
 
-                html += Sun.Toolkit.JSON.stringify(this.attributes);
             }
 
             return html;
         }
+
+        public Attributes attributes
+        {
+            get { return _attributes; }
+        }
+
+        public string expresstion
+        {
+            set;
+            get;
+        }
+
+
     }
 }

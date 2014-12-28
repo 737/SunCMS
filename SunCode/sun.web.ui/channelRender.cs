@@ -46,6 +46,8 @@ namespace sun.web.ui
                 {
                     var htmlTtxt = templateHelper.getTemplatePath(entChannel.templateList);
 
+                   
+
                     Template tmp = new Template(htmlTtxt, entChannel);
 
                     //setContextItem(entChannel, tmp);
