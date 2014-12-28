@@ -1,0 +1,56 @@
+<meta:include src="header.htm"	></meta:include>
+<div id="warpper">
+	<div id="main">
+		<div class="left">
+			<div class="left_5">
+                <div style=" padding:40px 35px 10px 35px;">
+                <p>地址：[@s:OrganizationAddress]</p> 
+                [@s:OrganizationContact]
+                </div>
+			</div>           
+		</div><!--left-->
+		<div class="right">
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg1.jpg" /></div>
+			<div class="right_con" style="min-height:645px !important;">
+			    <div class="title"><img src="[@u:path]img/list_message_tit1.jpg" /></div>
+			    <div class="site">当前位置：<a href="../../">首页</a> - [@channelname]</div>
+			    <div class="clear"></div>
+				<div class="right_message">
+				<ul>
+                <mp:msg gid="4" >
+				<li><p>您的问题：</p><input id="subject" name="subject" type="text" class="mesa" /></li>				
+				<li><p>您的姓名：</p><input id="name" name="name" type="text" class="mesa"  /></li>
+				<li><p>联系方式：</p><input id="contact" name="contact" type="text" class="mesa"  /></li>
+				<li><p>留言内容：</p><textarea id="content" name="content" class="mesb"  /></textarea></li>
+                <li><p>&nbsp;</p>&nbsp;</li>
+                <li style="clear:both;"><input id="Submit1" type="button"  value="&nbsp;" class="btnok" onclick="checkinput()"/></li>
+                </mp:msg>
+				</ul>
+				</div>
+			</div><!--1-->			
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg3.jpg" /></div>
+		</div><!--right-->
+	</div><!--main-->
+    <script type="text/jscript">
+              function checkinput() {
+                 var sj = document.getElementById("subject");
+                 var con = document.getElementById("content");				 
+                 if (sj.value == "" || con.value == "") {
+                     alert("填写内容!");                     
+                 }else{
+					 document.forms[0].submit();
+				 }
+             }
+			 
+			 function setImgsrc() {
+				var img = document.getElementById("vimg");
+				img.src = '/ac.ashx?code=' + Math.random();
+				img.style.visibility = "visible";
+             }
+             function hideImg() {
+                 var img = document.getElementById("vimg");
+                 img.style.visibility = "hidden";
+             }
+
+         </script> 
+<meta:include src="footer.htm"	></meta:include>

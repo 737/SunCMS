@@ -1,0 +1,39 @@
+<meta:include src="header.htm"	></meta:include>
+<div id="warpper">
+	<div id="main">
+		<div class="left">
+			<div class="left_4">
+			<div class="title"><img src="[@u:path]img/list_left_tit3.jpg" /></div>
+			<ul>
+            	<mc:menu add="here" cid="{channelid}">
+                <li class="{add}"><a href="{url}">{channelname}</a></li>
+                </mc:menu>                
+			</ul>
+			<div class="left_bottom"><img src="[@u:path]img/list_left_bg3.jpg" /></div>
+			</div>
+			<div class="left_5">
+			<div style=" padding:40px 35px 10px 35px;">
+			<p>地址：[@s:OrganizationAddress]</p> 
+			[@s:OrganizationContact]
+			</div>
+			</div>
+		</div><!--left-->
+		<div class="right">
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg1.jpg" /></div>
+			<div class="right_con">
+            	<mc:view>
+			    <div class="title"><img src="[@u:path]img/list_business_tit1.jpg" /></div>
+			    <div class="site">当前位置：<a href="../../">首页</a> - <mc:pcn cid="{channelid}"><a href="{url}">{channelname}</a></mc:pcn> - [@channelname]</div>
+			    <div class="clear"></div>
+				<div class="right_about">
+				<h3>{subject}</h3>
+				<div class="time">来源：{source}&nbsp;&nbsp;&nbsp;&nbsp;时间：{dateline,t="yyyy-MM-dd"}</div>
+				{body}
+				</div>
+                </mc:view>
+			</div><!--1-->	
+			<div class="clear"></div>		
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg3.jpg" /></div>
+		</div><!--right-->
+	</div><!--main-->
+<meta:include src="footer.htm"	></meta:include>

@@ -9,11 +9,10 @@ namespace Sun.HtmlEngine
 {
     public class Template : TemplateParse
     {
-        public string _text;
+        string _text;
+        object _data;
 
-        public object _data;
-
-        public string text
+        string text
         {
             get
             {
@@ -21,7 +20,7 @@ namespace Sun.HtmlEngine
             }
         }
 
-        public object data
+        object data
         {
             get
             {

@@ -1,0 +1,129 @@
+﻿<meta:include src="header.htm"	></meta:include>
+<script type="text/javascript">
+//滚动插件
+(function($){
+$.fn.extend({
+        Scroll:function(opt,callback){
+                //参数初始化
+                if(!opt) var opt={};
+                var _this=this.eq(0).find("ul:first");
+                var	lineH=_this.find("li:first").height(), //获取行高
+                	line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
+                    speed=opt.speed?parseInt(opt.speed,10):500, //卷动速度，数值越大，速度越慢（毫秒）
+                    timer=opt.timer?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+                if(line==0) line=1;
+                var upHeight=0-line*lineH;
+                //滚动函数
+                scrollUp=function(){
+                        _this.animate({
+                                marginTop:upHeight
+                        },speed,function(){
+                                for(i=1;i<=line;i++){
+                                        _this.find("li:first").appendTo(_this);
+                                }
+                                _this.css({marginTop:0});
+                        });
+                }
+                //鼠标事件绑定
+                _this.hover(
+					function(){
+                    clearInterval(timerID);
+               		},function(){
+                    timerID=setInterval("scrollUp()",timer);
+                	});
+				_this.mouseout();
+        }        
+})
+})(jQuery);
+
+$(document).ready(function(){
+        $("#scrollDiv").Scroll({line:2,speed:1000,timer:3000});
+		
+			//自动滚动			
+			var $ful = $("#case_scroll > ul:first");
+			var $fList = $ful.find("li");			
+			
+			//滚动函数
+			scrollLeft=function(){
+					$ful.animate({left:"-208px"},"slow",function(){
+						$ful.find("li:first").appendTo($ful);
+						$ful.css({left:0});
+					});	
+			}
+			//鼠标事件绑定
+			$ful.hover(
+				function(){
+				clearInterval(timerID1);
+				},function(){
+				timerID1=setInterval("scrollLeft()",3000);
+				});
+			$ful.mouseout();	//触发使用	
+});
+</script>
+<div id="warpper">
+	<div id="main">
+		<div class="left">
+			<div class="left_1">
+                <div class="title"><img src="[@u:path]img/index_left_tit1.jpg" /></div>
+                <div class="scroll_title" id="scrollDiv">
+                    <ul>
+                        <mc:list cids="4"  pagin="true" pagesize="16" type="art">
+                        <li><a href="{pageurlb}" target="_blank">{subject,l="28" r="..."}</a></li>  
+                        </mc:list>
+                    </ul>
+                </div>
+                <div class="scroll_more">
+                	<a href="/list-4.aspx" target="_blank">更多&gt;&gt;</a>
+                </div>
+			</div>
+			<div class="left_2">
+			<div class="title"><img src="[@u:path]img/index_left_tit2.jpg" /></div>
+			<ul>
+            	<mc:list cids="5" add="here" pagin="true" pagesize="5" type="art">
+				<li><a href="{pageurlb}" target="_blank">{subject}</a></li> 
+                </mc:list>
+			</ul>
+			</div>
+			<div class="left_3">
+			<div style=" padding:40px 35px 10px 35px;">
+				<p>地址：[@s:OrganizationAddress]</p> 
+				[@s:OrganizationContact]
+			</div>
+			</div>
+		</div><!--left-->
+		<div class="right">
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg1.jpg" /></div>
+			<div class="right_1">
+				<div class="title"><p><img src="[@u:path]img/index_right_tit1.jpg" /></p><span><a href="/view-1000-13.aspx" target="_blank"><img src="[@u:path]img/index_right_more.jpg" /></a></span></div>
+				<div class="right_con_index">
+					<mc:eview id="13" code="art">
+                    <img src="/a.ashx?a={titleimage}&s=3&w=278&h=186" />
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{body,l="350" r ="..."}</p>
+                    </mc:eview>
+				</div>
+			</div><!--1-->
+			<div class="right_2">
+				<div class="title"><p><img src="[@u:path]img/index_right_case_tit2.jpg" /></p><span><a href="/list-7.aspx" target="_blank"><img src="[@u:path]img/index_right_more.jpg" /></a></span></div>
+				<div class="right_2_box"  id="case_scroll">
+                    <ul>
+                    <mc:list cids="7"  pagesize="20" type="art">
+                        <li><a href="{pageurlb}" target="_blank"><p><img src="/a.ashx?a={titleimage}&s=3&w=182&h=111" /></p><span>{subject}</span></a></li>
+                    </mc:list>
+                    </ul>
+                </div>
+			</div><!--2-->
+			<div class="clear"></div>
+			<div class="right_2">
+				<div class="title"><p><img src="[@u:path]img/index_right_tit3.jpg" /></p><span><a href="/view-1004-1.aspx" target="_blank"><img src="[@u:path]img/index_right_more.jpg" /></a></span></div>
+				<ul>
+                	<mc:eview id="1" code="pic">
+                    <imagearray max="3">
+                    <li><a href="/view-1004-1.aspx" target="_blank"><p><img src="/t.ashx?src={imageurl}&s=3&w=182&h=111" /></p><span>{title}</span></a></li>
+                    </imagearray>
+                    </mc:eview>
+				</ul>				
+			</div><!--2-->
+			<div class="right_bg"><img src="[@u:path]img/index_right_bg3.jpg" /></div>
+		</div><!--right-->
+	</div><!--main-->
+<meta:include src="footer.htm"></meta:include>

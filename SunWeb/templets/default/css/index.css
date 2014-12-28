@@ -1,0 +1,47 @@
+/* CSS Document */
+*{ margin:0; padding:0}
+body{ text-align:center; font-family:"Î¢ÈíÑÅºÚ"; font-size:12px; color:#000; background:url(index_con_bg.jpg) repeat-y; }
+a{ text-decoration:none; color:#990000;}
+a:hover{ color:#ff0000;}
+a img{ border:none}
+.clear{ clear:both; margin:0px;}
+li{ list-style:none;text-align:left;}
+
+#warpper{ width:1440px; margin:0 auto;}
+#header{ background:url(index_top_bg.jpg) no-repeat; width:1440px; height:510px; margin:0 auto;}
+#main{ width:930px; margin:0 auto; text-align:left;}
+
+.left{ width:240px; float:left; display:inline; margin-left:10px;}
+.left_1,.left_2{ background:url(index_left_bg1.jpg) no-repeat; height:267px; margin-bottom:5px;}
+.left_1 .title img,.left_2 .title img{ margin:10px 0 0 70px;}
+
+.left_1 ul{ margin:15px; line-height:25px;}
+.left_1 ul li{ background:url(index_left_ico1.jpg) no-repeat left; text-indent:15px;}
+
+.left_2 ul { margin:15px 25px; line-height:35px;}
+.left_2 ul li{ background:url(index_left_bg2.jpg) no-repeat; width:188px; height:40px; text-align:center;}
+.left_2 ul li a{ color:#522929;}
+.left_2 ul li a:hover{ color:#990000;}
+
+.left_3{ background:url(index_left_bg3.jpg) no-repeat; height:177px; color:#522929;}
+.left_3 p{ line-height:20px;}
+
+.right{ float:left; display:inline; overflow:hidden; background:url(index_right_bg2.jpg) repeat-y; width:665px; font-size:13px; margin-left:2px; margin-top:2px;}
+.right_1,.right_2,.right_3{ width:645px; margin-top:10px;}
+.right_1 .title,.right_2 .title{ background:url(index_right_titbg.jpg) no-repeat; width:641px; height:21px; margin:5px 0 5px 10px;}
+.right_1 .title p,.right_2 .title p{ margin-left:15px; float:left; display:inline;}
+.right_1 .title span,.right_2 .title span{ float:right; margin-right:2px; margin-top:2px;}
+
+.right_1 .right_con{background:url(index_right_aboutbg.jpg) no-repeat; width:645px; height:232px; margin-left:10px;}
+.right_1 .right_con img{ width:278px; height:186px; border:2px solid #522929; float:left; display:inline; margin:20px 15px 0 15px;}
+.right_1 .right_con p{ float:left; display:inline; width:310px; margin:20px 15px auto 0; line-height:24px; font-size:13px; }
+
+.right_2 ul{ margin:0 15px;float:left; display:inline; width:630px;}
+.right_2 ul li{  float:left; display:inline; margin:20px 0 10px 10px;width:198px;}
+.right_2 ul li p{ background:url(index_right_casebg.jpg) no-repeat; width:198px; height:125px;}
+.right_2 ul li p img{ margin:7px;}
+.right_2 ul li span{ width:198px; display:block; text-align:center; height:25px; line-height:25px;}
+
+#bottom{ background:url(index_bottom_bg.jpg) no-repeat bottom; width:1000px; height:103px; margin:0 auto; color:#e7ddbc; padding-top:50px;}
+#bottom img{ float:left; display:inline; margin:0px 20px 10px 50px;}
+#bottom p{ text-align:left; margin-top:10px;}
