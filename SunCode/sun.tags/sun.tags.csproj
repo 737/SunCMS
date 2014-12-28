@@ -42,6 +42,7 @@
     <Compile Include="arcList.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

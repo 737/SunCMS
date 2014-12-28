@@ -5,24 +5,20 @@ using System.Text;
 using sun.generating.tags;
 using Sun.API;
 using Sun.Entity;
+using Sun.HtmlEngine.Tags;
+using System.Collections;
 
 namespace sun.tags
 {
-    public class menu : dataList
+    public class menu : ParseList
     {
-        public menu(string exp) : base(exp) { }
-        public menu(string exp, string innerHtml)
-            : base(exp, innerHtml) { }
+        public menu(string attributes, string innerHtml) : base(attributes, innerHtml) { }
 
-        protected override object getProvider()
+        protected override IList getCurrentData()
         {
             Sun.API.Pagelet.ApiChannel apiChannel = new Sun.API.Pagelet.ApiChannel();
 
             int cid = Sun.Toolkit.Parse.ToInt(base.attributes["channelId"], -1);
-            if (cid == -1)
-            {
-                cid = Sun.Toolkit.Parse.ToInt(base.context.attributes["channelId"], -1);
-            }
 
             var channelList = apiChannel.getChannelsWithChildrenById(cid);
 

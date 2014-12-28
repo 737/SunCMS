@@ -10,7 +10,7 @@ namespace Sun.HtmlEngine.Tags
     {
         string __exPresstion = "";
         // 标签属性正则
-        Regex regAttr = new Regex(@"\s*(?<name>[^=]+?)\s*=\s*(?<sign>[\'""]?)(?<value>.+)\2", RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
+        Regex regAttr = new Regex(@"\s*(?<name>[^=]+?)\s*=\s*(?<sign>[\'""]?)(?<value>.+?)\2", RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
 
         public Attributes(string expresstion)
         {

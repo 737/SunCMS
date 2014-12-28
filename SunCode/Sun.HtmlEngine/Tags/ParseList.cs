@@ -9,7 +9,6 @@ namespace Sun.HtmlEngine.Tags
 {
     public abstract class ParseList : ITag
     {
-
         string innerHtml;
         Attributes _attributes = null;
 

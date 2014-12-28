@@ -22,13 +22,13 @@ namespace Sun.HtmlEngine
 
         public string render()
         {
-            List<ITag> tagList = this.parseTags(_text);
+            var html = _text;
 
-            var html = "";
+            List<ITag> tagList = this.parseTags(html);
 
             foreach (var tag in tagList)
             {
-                html = _text.Replace(tag.expresstion, tag.render());
+                html = html.Replace(tag.expresstion, tag.render());
             }
 
             for (int i = 0; i < tagList.Count; i++)
