@@ -50,8 +50,11 @@
                 <div class="clear"></div>
                 <div class="right_business">
                     <ul>
-                        <sun:arcList channelid="21" >
-                            <li><p><a target="_blank">[@rowIndex]{subject}</a></p></li>
+                        <sun:arcList row="2">
+                            <li>
+                                <p><a target="_blank">[@rowIndex]{subject}</a></p>
+                                <span>{time}</span>
+                            </li>
                         </sun:arcList>
 
                         <!--<mc:list cids="{channelid}" pagin="true" pagesize="18" type="art">

@@ -18,8 +18,7 @@ namespace Sun.HtmlEngine.Tags
 
             parseRegAttr(__exPresstion);
         }
-
-
+        
         internal void parseRegAttr(string sExpresstion)
         {
             string name = "";
