@@ -50,7 +50,7 @@ namespace Sun.formatting
             Regex reg = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
             for (Match match = reg.Match(text); match.Success; match = match.NextMatch())
             {
-                typeFormatField field = new typeFormatField(match.Groups["value"].Value);
+                FormatField field = new FormatField(match.Groups["value"].Value);
                 if (string.IsNullOrEmpty(field.name))
                 {
                     html = html.Replace(match.Value, field.getValue("n"));

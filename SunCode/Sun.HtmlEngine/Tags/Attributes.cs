@@ -16,10 +16,10 @@ namespace Sun.HtmlEngine.Tags
         {
             __exPresstion = expresstion;
 
-            parseRegAttr(__exPresstion);
+            parseAttr(__exPresstion);
         }
         
-        internal void parseRegAttr(string sExpresstion)
+        internal void parseAttr(string sExpresstion)
         {
             string name = "";
             string value = "";

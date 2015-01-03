@@ -8,8 +8,6 @@ namespace Sun.formatting
 {
     public static class typeFormatting
     {
-
-
         public static string[] htmlTags = new string[] { 
             "DOCTYPE", "HTML", "HEAD", "META", "TITLE", "BODY", "H1", "H6", "P", "FONT", "BASEFONT", "B", "I", "U", "BIG", "SMALL", 
             "S", "STRIKE", "TT", "SUB", "SUP", "RB", "RP", "RT", "RUBY", "MARQUEE", "BLINK", "BDO", "BR", "NOBR", "WBR", "EM", 
@@ -19,6 +17,51 @@ namespace Sun.formatting
             "LAYER", "ILAYER", "NOLAYER", "FORM", "INPUT", "SELECT", "OPTGROUP", "OPTION", "SELECT ", "TEXTAREA", "LEGEND", "FIELDSET", "LABEL", "ISINDEX", "OL", "UL", 
             "LI", "DL", "DT", "DD", "DIR", "MENU", "SCRIPT", "NOSCRIPT", "STYLE", "DIV", "SPAN", "PRE", "PLAINTEXT", "XMP", "LISTING"
          };
+
+        public static string format(object fillEntity, string tagInnerHTML)
+        {
+            if (fillEntity == null)
+            {
+                return tagInnerHTML;
+            }
+
+            // 取出所有字段的正则表达式
+            string pattern = @"\{(?<field>[一-龥A-Za-z_]+?[^;]*?)\}";
+            Regex reg = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
+            FormatField field = null;
+            string result = tagInnerHTML;
+
+            for (Match match = reg.Match(tagInnerHTML); match.Success; match = match.NextMatch())
+            {
+                field = new FormatField(match.Groups["field"].Value);
+
+                object propertyValue = getPropertyValue(fillEntity, field.name);
+
+                if ((propertyValue != null) && (propertyValue.ToString() != ""))
+                {
+                    string htmlTxt = propertyValue.ToString();
+
+                    // 格式化时间
+                    if ((field.isHasParameters) && (field.parameters.Get("t") != ""))
+                    {
+                        var style = field.parameters.Get("t");
+
+                        htmlTxt = Sun.Toolkit.Date.formatTime(htmlTxt, style);
+                    }
+
+
+                    result = result.Replace(match.Value, htmlTxt);
+                }
+                else
+                {
+                    result = result.Replace(match.Value, "SunCMS提示：" + field.name + ":相应的字段不存在");
+                }
+            }
+            reg = null;
+
+            return result;
+        }
+
 
         private static PropertyInfo getPropertyInfo(PropertyInfo[] props, string name)
         {
@@ -45,93 +88,44 @@ namespace Sun.formatting
             return null;
         }
 
-        private static object getPropertyValue(object obj, string sFormat)
-        {
-            string pattern = @"\s*(?<fun>[^\(]+?)\((?<params>.*?)\)\s*|(?<fun>[^_]+?)_(?<params>.*)";
-            Match match = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase).Match(sFormat);
-            if (match.Success)
-            {
-                string name = match.Groups["fun"].Value;
-                string value = match.Groups["params"].Value;
-                object[] args = format(obj, value).Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                try
-                {
-                    return obj.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase, null, obj, args);
-                }
-                catch (Exception)
-                {
+        //private static object getPropertyValue111(object obj, string sFormat)
+        //{
+        //    string pattern = @"\s*(?<fun>[^\(]+?)\((?<params>.*?)\)\s*|(?<fun>[^_]+?)_(?<params>.*)";
+        //    Match match = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase).Match(sFormat);
+        //    if (match.Success)
+        //    {
+        //        string name = match.Groups["fun"].Value;
+        //        string value = match.Groups["params"].Value;
+        //        object[] args = format(obj, value).Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+        //        try
+        //        {
+        //            return obj.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase, null, obj, args);
+        //        }
+        //        catch (Exception)
+        //        {
 
-                    throw;
-                }
-            }
-            return null;
-        }
-        private static object getPropertyValue(object obj, PropertyInfo[] props, string propName)
+        //            throw;
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        private static object getPropertyValue(object filledEntity, string propName)
         {
-            if ((obj.GetType() == typeof(string)) && (propName.ToLower() == "item"))
+            if ((filledEntity.GetType() == typeof(string)) && (propName.ToLower() == "item"))
             {
-                return obj.ToString();
+                return filledEntity.ToString();
             }
+
+            PropertyInfo[] props = filledEntity.GetType().GetProperties();
             PropertyInfo propertyInfo = getPropertyInfo(props, propName);
+
             if (propertyInfo != null)
             {
-                return propertyInfo.GetValue(obj, null);
+                return propertyInfo.GetValue(filledEntity, null);
             }
-            propertyInfo = getPropertyInfo(obj.GetType().GetProperties(), "item");
-            if (propertyInfo != null)
-            {
-                try
-                {
-                    return propertyInfo.GetValue(obj, new object[] { propName });
-                }
-                catch (Exception)
-                {
-                    return propName;
-                }
-            }
+
             return null;
-        }
-
-
-        public static string format(object fillEntity, string html)
-        {
-            if (fillEntity == null)
-            {
-                return html;
-            }
-            PropertyInfo[] properties = fillEntity.GetType().GetProperties();
-            string pattern = @"\{(?<value>[一-龥A-Za-z_]+?[^;]*?)\}";
-            string methodResult = html;
-            Regex reg = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
-            for (Match match = reg.Match(html); match.Success; match = match.NextMatch())
-            {
-                Sun.diagnostics.log.recordError("--------" + match.Groups["value"].Value);
-
-                typeFormatField field = new typeFormatField(match.Groups["value"].Value);
-                if (string.IsNullOrEmpty(field.name))
-                {
-                    methodResult = methodResult.Replace(match.Value, field.getValue("n"));
-                }
-                else
-                {
-                    object propertyValue = null;
-
-                    propertyValue = getPropertyValue(fillEntity, properties, field.name);
-
-                    if ((propertyValue == null) || (propertyValue.ToString() == ""))
-                    {
-                        methodResult = methodResult.Replace(match.Value, "SunCMS提示：没有找到相应的内容");
-                    }
-                    else
-                    {
-                        string htmlTxt = propertyValue.ToString();
-                        methodResult = methodResult.Replace(match.Value, htmlTxt);
-                    }
-                }
-            }
-            reg = null;
-            properties = null;
-            return methodResult;
         }
 
     }

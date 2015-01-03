@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="context.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="io.cs" />
     <Compile Include="JSON.cs" />
     <Compile Include="Parse.cs" />

@@ -51,12 +51,14 @@
     <Compile Include="configFile\helper\ConfigHelper.cs" />
     <Compile Include="configFile\file\configTag.cs" />
     <Compile Include="config_web\sunHttpModule.cs" />
-    <Compile Include="formatting\typeFormatField.cs" />
+    <Compile Include="formatting\FormatField.cs" />
+    <Compile Include="formatting\textFormatting.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Helper\HelperContext.cs" />
     <Compile Include="EPageletAction.cs" />
     <Compile Include="diagnostics\log.cs" />
     <Compile Include="ProviderData.cs" />
-    <Compile Include="formatting\textFormatting.cs" />
     <Compile Include="Handlers\AuthCodeHandler.cs" />
     <Compile Include="Helper\Console.cs" />
     <Compile Include="Helper\HelperSerialization.cs" />
