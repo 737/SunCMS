@@ -33,7 +33,7 @@ namespace Sun.HtmlEngine.Tags
                 var _itemHtml = "";
                 for (int i = 0; i < max; i++)
                 {
-                    _itemHtml = Sun.formatting.typeFormatting.format(datalist[i], this.innerHtml);
+                    _itemHtml = Sun.HtmlEngine.Format.FormatField.format(datalist[i], this.innerHtml);
                     _itemHtml = _otherTag.Replace(_itemHtml, (i + 1).ToString());
 
                     html = html + _itemHtml;

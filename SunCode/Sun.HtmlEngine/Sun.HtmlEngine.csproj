@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Format\Filed.cs" />
+    <Compile Include="Format\FormatField.cs" />
     <Compile Include="Tags\ITag.cs" />
     <Compile Include="Tags\Attributes.cs" />
     <Compile Include="Tags\TagCreater.cs" />
