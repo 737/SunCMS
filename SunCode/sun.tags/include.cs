@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using sun.generating;
-using sun.generating.tags;
+using Sun.HtmlEngine;
+using Sun.HtmlEngine.Tags;
+
 
 namespace sun.tags
 {
-    public class include : tag
+    public class Include : ParseConent
     {
-        public include() { }
+        public Include(string sAttributes, string sInnerHtml) : base(sAttributes, sInnerHtml) { }
 
-        public include(string exp) : base(exp) { }
-
-        public include(string exp, string html) : base(exp, html) { }
-
-        public override string renderContent()
-        {
+        public override string renderContent() {
 
             var html = "";
             var src = base.attributes["src"];
@@ -27,6 +23,5 @@ namespace sun.tags
 
             return html;
         }
-
     }
 }

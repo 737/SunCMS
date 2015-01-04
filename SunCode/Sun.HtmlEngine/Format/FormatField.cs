@@ -41,8 +41,8 @@ namespace Sun.HtmlEngine.Format
                     string htmlTxt = propertyValue.ToString();
 
                     // 格式化时间
-                    if ((field.isHasParameters) && (field.parameters.Get("t") != "")) {
-                        var style = field.parameters.Get("t");
+                    if ((field.isHasParameters) && (field.parameters.Get("exp") != "")) {
+                        var style = field.parameters.Get("exp");
 
                         htmlTxt = Sun.Toolkit.Date.formatTime(htmlTxt, style);
                     }

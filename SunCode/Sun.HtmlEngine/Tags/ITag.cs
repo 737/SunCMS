@@ -8,9 +8,11 @@ namespace Sun.HtmlEngine.Tags
 {
     public interface ITag
     {
+        // 整个TAG的HTML
         string expresstion { set; get; }
 
-        Attributes attributes {  get; }
+        // TAG的属性
+        Attributes attributes { set; get; }
 
         string render();
     }

@@ -42,7 +42,7 @@ namespace Sun.HtmlEngine.Tags
             }
         }
 
-        public string exPresstion
+        public string expresstion
         {
             get
             {

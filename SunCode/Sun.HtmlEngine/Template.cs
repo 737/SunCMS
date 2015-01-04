@@ -75,7 +75,6 @@ namespace Sun.HtmlEngine
                 if (tagCreater != null && tag != null)
                 {
                     tag.expresstion = match.Value;
-                    
 
                     tagParsers.Add(tag);
                 }

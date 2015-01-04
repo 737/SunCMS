@@ -44,6 +44,8 @@
     <Compile Include="Format\FormatField.cs" />
     <Compile Include="Tags\ITag.cs" />
     <Compile Include="Tags\Attributes.cs" />
+    <Compile Include="Tags\Parse.cs" />
+    <Compile Include="Tags\ParseConent.cs" />
     <Compile Include="Tags\TagCreater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tags\ParseList.cs" />
