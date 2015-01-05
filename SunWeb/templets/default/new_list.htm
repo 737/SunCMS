@@ -1,23 +1,6 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=[@s:Charset]" />    
-    <title>我是头部内容</title>
-    <META NAME="KEYWORDS" CONTENT="[@s:Keywords]">
-	<META NAME="DESCRIPTION" CONTENT="[@s:Description]">
-	<link href="/templets/default/css/css.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/templets/default/js/jquery_1.6.2.js"></script>
-</head>
-<body>
-	<div id="headerBox">
-        <h1>信息前沿</h1>
-    	<ul>
-            <li>公司动态</li>
-            <li>行业动态</li>
-            <li>古建常识</li>
-    	</ul>
-	</div>
-    <!--header-->
+﻿
+
+<sun:include src="header.htm" />
 
 <div id="warpper">
     <div id="main">
@@ -58,6 +41,7 @@
                         </sun:arcList>
                     </ul>
                 </div>
+
 
                 <!--<mc:list cids="{channelid}" pagin="true" pagesize="18" type="art">
                     <li><p><a href="{pageurlb}" target="_blank">{subject}</a></p><span>{dateline,t="yyyy-MM-dd"}</span></li>
