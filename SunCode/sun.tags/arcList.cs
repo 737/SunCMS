@@ -18,6 +18,16 @@ namespace sun.tags
             
             int cid = Sun.Toolkit.Parse.ToInt(base.attributes["channelId"], -1);
 
+            if (cid == -1) {
+                var _cid =  Sun.HelperContext.GetQueryString("channelid");
+
+                cid = Sun.Toolkit.Parse.ToInt(_cid, -1);
+            }
+
+            if (cid == -1) {
+                return null;
+            }
+
             List<Sun.Entity.Pagelet.EntityArchive> archives = apiArchive.getListByGroupId(cid, true);
 
             return archives;

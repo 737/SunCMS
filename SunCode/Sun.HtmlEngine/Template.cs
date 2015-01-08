@@ -13,56 +13,55 @@ namespace Sun.HtmlEngine
         string _text;
         object _data;
 
-        public Template(string sTemplatePath, object oData)
-        {
+        public Template(string sTemplatePath, object oData) {
             _text = Sun.Toolkit.io.getTextFile(sTemplatePath);
             _data = oData;
         }
+        
+        public string render() {
+            return this.iteratorRender(_text);
+        }
 
+        // 迭代处理所有标签
+        // include标签中可能有标签
+        private string iteratorRender(string sHtmlText) {
+            List<ITag> tagList = this.parseTags(sHtmlText);
 
-        public string render()
-        {
-            var html = _text;
+            if (tagList.Count > 0) {
+                foreach (var tag in tagList) {
+                    sHtmlText = sHtmlText.Replace(tag.expresstion, tag.render());
+                }
 
-            List<ITag> tagList = this.parseTags(html);
-
-            foreach (var tag in tagList)
-            {
-                html = html.Replace(tag.expresstion, tag.render());
+                sHtmlText = this.iteratorRender(sHtmlText);
             }
 
-            for (int i = 0; i < tagList.Count; i++)
-            {
+            for (int i = 0; i < tagList.Count; i++) {
                 tagList[i] = null;
             }
             tagList = null;
 
-            return html;
+            return sHtmlText;
         }
 
-        private string parseGlobalTag(string sHtmlText)
-        {
+        private string parseGlobalTag(string sHtmlText) {
 
             return sHtmlText;
         }
 
         // 解析HtmlText中所有的 tag
-        private List<ITag> parseTags(string sHtmlText)
-        {
-            if (string.IsNullOrEmpty(sHtmlText))
-            {
+        private List<ITag> parseTags(string sHtmlText) {
+            if (string.IsNullOrEmpty(sHtmlText)) {
                 return null;
             }
 
-            string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>.*)(</\k<namespace>:\k<tag>>))";
+            string _pattern = @"(<(?<namespace>[\w]+?):(?<tag>[\w]+)\s*(?<attribute>[^<]*?)/>)|(<(?<namespace>[\w]+):(?<tag>[\w]+)\s*(?<attribute>[^>]*)>(?<innertext>.*?)(</\k<namespace>:\k<tag>>))";
 
             Regex reg = new Regex(_pattern, RegexOptions.Singleline | RegexOptions.Multiline | RegexOptions.IgnoreCase);
 
             List<ITag> tagParsers = new List<ITag>();
             ITag tag = null;
 
-            for (Match match = reg.Match(sHtmlText); match.Success; match = match.NextMatch())
-            {
+            for (Match match = reg.Match(sHtmlText); match.Success; match = match.NextMatch()) {
                 string _namespace = match.Groups["namespace"].Value,
                         _tag = match.Groups["tag"].Value,
                         _attribute = match.Groups["attribute"].Value,
@@ -72,10 +71,8 @@ namespace Sun.HtmlEngine
                 TagCreater tagCreater = new TagCreater(_namespace + ":" + _tag);
                 tag = tagCreater.createParser(_attribute, _innerHtml);
 
-                if (tagCreater != null && tag != null)
-                {
+                if (tagCreater != null && tag != null) {
                     tag.expresstion = match.Value;
-                    
 
                     tagParsers.Add(tag);
                 }
