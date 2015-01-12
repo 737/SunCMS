@@ -1,16 +1,22 @@
 ﻿
 
+<p>
+    asdfasdfsdf: [@s:descrIption]   [@s:beian ? ---1 : =]    [@s:companyName ? ---1 : =]
+</p>
+
+
 <sun:include src="header.htm" />
+
 
 <div id="warpper">
     <div id="main">
-        
+
         <!--left-->
         <div class="left">
             <div class="left_4">
                 <div class="title"><img src="/templets/default/img/index_left_tit1.jpg" /></div>
                 <ul>
-                    <sun:menu add="here" channelid="21" >
+                    <sun:menu add="here" channelid="21">
                         <li class="{add}"><a href="{url}">{subject}</a></li>
                     </sun:menu>
                 </ul>
@@ -18,7 +24,7 @@
             </div>
             <div class="left_5">
                 <div style=" padding:40px 35px 10px 35px;">
-                    <p>地址：[@s:OrganizationAddress]</p> 
+                    <p>地址：[@s:OrganizationAddress]</p>
                     [@s:OrganizationContact]
                 </div>
             </div>
@@ -33,12 +39,12 @@
                 <div class="clear"></div>
                 <div class="right_business">
                     <ul>
-                        <sun:arcList row="2">
+                        <sun:arclist row="2">
                             <li>
                                 <p><a target="_blank">[@rowIndex]{subject}</a></p>
                                 <span>{time, exp='MM/dd'}</span>
                             </li>
-                        </sun:arcList>
+                        </sun:arclist>
                     </ul>
                 </div>
 
@@ -47,12 +53,12 @@
                     <li><p><a href="{pageurlb}" target="_blank">{subject}</a></p><span>{dateline,t="yyyy-MM-dd"}</span></li>
                 </mc:list>-->
 
-             </div>
-             <div class="right_bg"><img src="/templets/default/img/index_right_bg3.jpg" /></div>             
+            </div>
+            <div class="right_bg"><img src="/templets/default/img/index_right_bg3.jpg" /></div>
         </div>
         <!--right-->
 
-        <div class="clear"></div>       
+        <div class="clear"></div>
     </div><!--main-->
 
-<sun:include src="footer.htm"></sun:include>
+    <sun:include src="footer.htm"></sun:include>

@@ -14,6 +14,9 @@ namespace Sun.HtmlEngine.Tags
         // TAG的属性
         Attributes attributes { set; get; }
 
+        // 当前 解析器使用的数据
+        object data { get; set; }
+
         string render();
     }
 }

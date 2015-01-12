@@ -20,5 +20,15 @@ namespace Sun.HtmlEngine.Tags
         }
 
         public abstract string render();
+
+
+        public object data {
+            get {
+                return null;
+            }
+            set {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

@@ -25,13 +25,16 @@ namespace Sun.HtmlEngine
         // 迭代处理所有标签
         // include标签中可能有标签
         private string iteratorRender(string sHtmlText) {
-            List<ITag> tagList = this.parseTags(sHtmlText);
+            List<ITag> tagList = parseTags(sHtmlText);
 
             if (tagList.Count > 0) {
                 foreach (var tag in tagList) {
                     sHtmlText = sHtmlText.Replace(tag.expresstion, tag.render());
+
+                    sHtmlText = parseGlobalAndContextTag(tag.data, sHtmlText);
                 }
 
+                // 递归调用，直到处理所有标签为止
                 sHtmlText = this.iteratorRender(sHtmlText);
             }
 
@@ -43,7 +46,12 @@ namespace Sun.HtmlEngine
             return sHtmlText;
         }
 
-        private string parseGlobalTag(string sHtmlText) {
+        private string parseGlobalAndContextTag(object data, string sHtmlText) {
+            TagGlobalAndContext globalContext = new TagGlobalAndContext();
+            
+            globalContext.addPrefixAndData("s", Sun.configSystem.getConfig());
+
+            sHtmlText = globalContext.render(sHtmlText, "s");
 
             return sHtmlText;
         }
