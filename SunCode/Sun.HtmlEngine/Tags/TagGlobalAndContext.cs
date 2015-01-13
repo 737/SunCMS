@@ -89,6 +89,9 @@ namespace Sun.HtmlEngine.Tags
                     newValue = string.Format("{0}", _false);
                 } else if (!string.IsNullOrEmpty(value)) {
                     newValue = string.Format("{0}{1}", value, _true);
+                } else {
+                    // 如果相应的字段不存在则直接将表达示输出
+                    newValue = match.Value.ToString();
                 }
 
                 sTxt = sTxt.Replace(match.Value, newValue);
