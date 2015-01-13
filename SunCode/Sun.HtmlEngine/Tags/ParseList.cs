@@ -20,9 +20,9 @@ namespace Sun.HtmlEngine.Tags
             IList datalist = this.getCurrentData();
 
             if ((datalist != null) && (datalist.Count > 0)) {
-                int max = datalist.Count;
                 var _itemHtml = "";
-                for (int i = 0; i < max; i++) {
+
+                for (int i = 0; i < datalist.Count; i++) {
                     _itemHtml = Sun.HtmlEngine.Format.FormatField.format(datalist[i], base.tagInnerHTML);
                     _itemHtml = _otherTag.Replace(_itemHtml, (i + 1).ToString());
 

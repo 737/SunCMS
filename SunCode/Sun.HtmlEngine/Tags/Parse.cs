@@ -22,13 +22,7 @@ namespace Sun.HtmlEngine.Tags
         public abstract string render();
 
 
-        public object data {
-            get {
-                return null;
-            }
-            set {
-                throw new NotImplementedException();
-            }
-        }
+        // 当前Tag对其的数据
+        public object data { set; get; }
     }
 }

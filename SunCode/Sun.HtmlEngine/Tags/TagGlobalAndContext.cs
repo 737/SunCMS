@@ -59,11 +59,8 @@ namespace Sun.HtmlEngine.Tags
             // 匹配 [@s:subject]    [@c:subject? - ]   [ @s : subject ? - : = ]
             var pattern = string.Format("{0}|{1}|{2}",
                 @"(\[\s*\@(?<key>[A-Za-z]*?)\s*:\s*(?<value>[A-Za-z]*?)\s*\])",
-                @"(\[\s*\@(?<key>[A-Za-z]*?)\s*:\s*(?<value>[A-Za-z]*?)\s*\?{1}\s*(?<true>[^:\]]*?)\])",
-                @"(\[\s*\@(?<key>[A-Za-z]*?)\s*:\s*(?<value>[A-Za-z]*?)\s*\?{1}\s*(?<true>[^:\]]*?)\s:{1}\s(?<false>[^:\]]*?)\])");
-
-            //匹配 [sun:context.subject]    [sun:context.subject? - ]   [sun:context.subject? - : = ]  
-            //string pattern = @"(\[(?<value>sun:" + sPrefix + @"[A-Za-z_:.]+?[^:\]?])*?\])|(\[(?<value>sun:" + sPrefix + @"[A-Za-z_:.]+?[^?])\?{1}(?<true>[^:\]]*?)\])|(\[(?<value>sun:" + sPrefix + @"[A-Za-z_:.]+?[^?])\?{1}(?<true>[^\]]*?):{1}(?<false>[^:\]]*?)\])";
+                @"(\[\s*\@(?<key>[A-Za-z]*?)\s*:\s*(?<value>[A-Za-z]*?)\s*\?{1}(?<true>[^:\]]*?)\])",
+                @"(\[\s*\@(?<key>[A-Za-z]*?)\s*:\s*(?<value>[A-Za-z]*?)\s*\?{1}(?<true>[^:\]]*?):{1}(?<false>[^:\]]*?)\])");
 
             if (string.IsNullOrEmpty(sPrefix)) {
                 return sTxt;
@@ -85,6 +82,7 @@ namespace Sun.HtmlEngine.Tags
                 newValue = "";
                 value = this.getValue(key, value);
 
+                // false存在，值不存在，输出false对应值
                 if (!string.IsNullOrEmpty(_false) && string.IsNullOrEmpty(value)) {
                     newValue = string.Format("{0}", _false);
                 } else if (!string.IsNullOrEmpty(value)) {

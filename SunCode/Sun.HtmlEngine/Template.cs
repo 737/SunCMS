@@ -12,16 +12,24 @@ namespace Sun.HtmlEngine
     {
         string _text;
         object _data;
-
+        TagGlobalAndContext globalContext;
+        
         public Template(string sTemplatePath, object oData) {
+            globalContext = new TagGlobalAndContext();
+
             _text = Sun.Toolkit.io.getTextFile(sTemplatePath);
             _data = oData;
         }
-        
+
         public string render() {
+            // 系统数据
+            globalContext.addPrefixAndData("s", Sun.configSystem.getConfig());
+            // 当前环境数据
+            globalContext.addPrefixAndData("c", _data);
+
             return this.iteratorRender(_text);
         }
-
+        
         // 迭代处理所有标签
         // include标签中可能有标签
         private string iteratorRender(string sHtmlText) {
@@ -47,11 +55,8 @@ namespace Sun.HtmlEngine
         }
 
         private string parseGlobalAndContextTag(object data, string sHtmlText) {
-            TagGlobalAndContext globalContext = new TagGlobalAndContext();
-            
-            globalContext.addPrefixAndData("s", Sun.configSystem.getConfig());
-
             sHtmlText = globalContext.render(sHtmlText, "s");
+            sHtmlText = globalContext.render(sHtmlText, "c");
 
             return sHtmlText;
         }
