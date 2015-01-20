@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.UI;
 
-namespace sun.web.ui
+namespace Sun.Web.UI
 {
     public static class pageNotFound
     {

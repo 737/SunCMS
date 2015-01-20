@@ -23,3 +23,6 @@
 
 数据库中，字段不可以使用enity
 因为，所有bin都entiy开头的，在context query的时候会将entity去掉   line 70 ,HelperContext.cs 
+
+
+http://localhost:17140/sun/api/pagelet/Channel/retrieve.ashx

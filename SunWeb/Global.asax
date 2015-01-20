@@ -12,7 +12,7 @@
         Sun.Hubble.Setting.Init();
         PanGu.Segment.Init();
         
-        //APIHelper.Register(GlobalConfiguration.Configuration);
+        APIHelper.Register(GlobalConfiguration.Configuration);
     }
     
     void Application_End(object sender, EventArgs e) 

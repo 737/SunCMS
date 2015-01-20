@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Util", "Sun.Util\Sun.Util.csproj", "{35297929-EC2A-49CA-9FC3-3400390E8E33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Data.SqlServer", "Sun.Data.SqlServer\Sun.Data.SqlServer.csproj", "{688E4FED-7023-4C6D-9FB3-8179D6350D43}"
@@ -39,8 +41,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanGu", "PanGu\PanGu.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Zest", "Sun.Zest\Sun.Zest.csproj", "{E36C6895-4355-4BA8-9699-14ABB98BA2E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sun.web.ui", "sun.web.ui\sun.web.ui.csproj", "{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sun.generating", "sun.generating\sun.generating.csproj", "{D35146E1-E210-4DE2-9349-5846B29DD50A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sun.tags", "sun.tags\sun.tags.csproj", "{927E2349-1F96-4A5F-8CF4-B0C94E9B46D2}"
@@ -48,7 +48,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SunWeb", "..\SunWeb\", "{94957FF9-0083-450E-BD20-0C9393E2A2BB}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{35297929-EC2A-49CA-9FC3-3400390E8E33}|Sun.Util.dll;{688e4fed-7023-4c6d-9fb3-8179d6350d43}|Sun.Data.SqlServer.dll;{e1779362-41a3-487a-a325-1347a9d9cc76}|Sun.API.dll;{8112B461-2C18-4DCB-A01E-1794078B02BE}|Sun.dll;{38D8D3FB-6414-4125-A353-BBBC6C87CA8B}|Sun.Entity.dll;{7B714803-0EB9-420C-89DE-18E4566421DB}|Sun.SunControl.dll;{2FC2DC5B-87E2-42D3-9CA1-7C91432BEE26}|Sun.Data.dll;{9CC61857-1FAA-4C28-B241-93DB4D086051}|Sun.Core.dll;{e71eed03-5297-4f87-b5bf-7711ae42e5da}|Sun.UI.dll;{673dc362-c176-48af-9d07-4d7f177d928d}|Sun.Hubble.dll;{87955659-0C56-45A6-8208-A3D480E2C6F7}|Sun.Toolkit.dll;{edd971ed-2302-4773-bcfa-0db7cfb70498}|Sun.Zone.dll;{da8a7f19-8898-4a99-b3af-12196549ac63}|Sun.ViewModel.dll;{65a081bc-d0e6-466e-abef-b206d3cef861}|Sun.Pagelet.dll;{24eb8728-e50e-4a51-a1cb-8b39d6dbdf8f}|PanGu.dll;{99f2bc2e-69b4-462d-a6ed-bb290f5b2c2c}|sun.web.ui.dll;{D35146E1-E210-4DE2-9349-5846B29DD50A}|sun.generating.dll;{927e2349-1f96-4a5f-8cf4-b0c94e9b46d2}|sun.tags.dll;{3E608EED-DE3B-46C8-98F2-4526241212F6}|Sun.HtmlEngine.dll;"
+		ProjectReferences = "{35297929-EC2A-49CA-9FC3-3400390E8E33}|Sun.Util.dll;{688e4fed-7023-4c6d-9fb3-8179d6350d43}|Sun.Data.SqlServer.dll;{e1779362-41a3-487a-a325-1347a9d9cc76}|Sun.API.dll;{8112B461-2C18-4DCB-A01E-1794078B02BE}|Sun.dll;{38D8D3FB-6414-4125-A353-BBBC6C87CA8B}|Sun.Entity.dll;{7B714803-0EB9-420C-89DE-18E4566421DB}|Sun.SunControl.dll;{2FC2DC5B-87E2-42D3-9CA1-7C91432BEE26}|Sun.Data.dll;{9CC61857-1FAA-4C28-B241-93DB4D086051}|Sun.Core.dll;{e71eed03-5297-4f87-b5bf-7711ae42e5da}|Sun.UI.dll;{673dc362-c176-48af-9d07-4d7f177d928d}|Sun.Hubble.dll;{87955659-0C56-45A6-8208-A3D480E2C6F7}|Sun.Toolkit.dll;{edd971ed-2302-4773-bcfa-0db7cfb70498}|Sun.Zone.dll;{da8a7f19-8898-4a99-b3af-12196549ac63}|Sun.ViewModel.dll;{65a081bc-d0e6-466e-abef-b206d3cef861}|Sun.Pagelet.dll;{24eb8728-e50e-4a51-a1cb-8b39d6dbdf8f}|PanGu.dll;{D35146E1-E210-4DE2-9349-5846B29DD50A}|sun.generating.dll;{927e2349-1f96-4a5f-8cf4-b0c94e9b46d2}|sun.tags.dll;{3E608EED-DE3B-46C8-98F2-4526241212F6}|Sun.HtmlEngine.dll;{f727b90c-4f3b-4773-884b-d1386d573247}|Sun.Web.UI.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/SunWeb"
 		Debug.AspNetCompiler.PhysicalPath = "..\SunWeb\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SunWeb\"
@@ -66,9 +66,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SunWeb", "..\SunWeb\", "{94
 		VWDPort = "17140"
 		VWDDynamicPort = "false"
 		VWDVirtualPath = "/"
+		SlnRelativePath = "..\SunWeb\"
+		StartServerOnDebug = "true"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.HtmlEngine", "Sun.HtmlEngine\Sun.HtmlEngine.csproj", "{3E608EED-DE3B-46C8-98F2-4526241212F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Web.UI", "Sun.Web.UI\Sun.Web.UI.csproj", "{F727B90C-4F3B-4773-884B-D1386D573247}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +118,7 @@ Global
 		{2FC2DC5B-87E2-42D3-9CA1-7C91432BEE26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B714803-0EB9-420C-89DE-18E4566421DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B714803-0EB9-420C-89DE-18E4566421DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B714803-0EB9-420C-89DE-18E4566421DB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{7B714803-0EB9-420C-89DE-18E4566421DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B714803-0EB9-420C-89DE-18E4566421DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9CC61857-1FAA-4C28-B241-93DB4D086051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -130,6 +135,7 @@ Global
 		{673DC362-C176-48AF-9D07-4D7F177D928D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87955659-0C56-45A6-8208-A3D480E2C6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87955659-0C56-45A6-8208-A3D480E2C6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87955659-0C56-45A6-8208-A3D480E2C6F7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{87955659-0C56-45A6-8208-A3D480E2C6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87955659-0C56-45A6-8208-A3D480E2C6F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDD971ED-2302-4773-BCFA-0DB7CFB70498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -138,6 +144,7 @@ Global
 		{EDD971ED-2302-4773-BCFA-0DB7CFB70498}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65A081BC-D0E6-466E-ABEF-B206D3CEF861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65A081BC-D0E6-466E-ABEF-B206D3CEF861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A081BC-D0E6-466E-ABEF-B206D3CEF861}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{65A081BC-D0E6-466E-ABEF-B206D3CEF861}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65A081BC-D0E6-466E-ABEF-B206D3CEF861}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA8A7F19-8898-4A99-B3AF-12196549AC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -152,10 +159,6 @@ Global
 		{E36C6895-4355-4BA8-9699-14ABB98BA2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E36C6895-4355-4BA8-9699-14ABB98BA2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E36C6895-4355-4BA8-9699-14ABB98BA2E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99F2BC2E-69B4-462D-A6ED-BB290F5B2C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D35146E1-E210-4DE2-9349-5846B29DD50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D35146E1-E210-4DE2-9349-5846B29DD50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D35146E1-E210-4DE2-9349-5846B29DD50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -172,6 +175,10 @@ Global
 		{3E608EED-DE3B-46C8-98F2-4526241212F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E608EED-DE3B-46C8-98F2-4526241212F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E608EED-DE3B-46C8-98F2-4526241212F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F727B90C-4F3B-4773-884B-D1386D573247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F727B90C-4F3B-4773-884B-D1386D573247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F727B90C-4F3B-4773-884B-D1386D573247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F727B90C-4F3B-4773-884B-D1386D573247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
