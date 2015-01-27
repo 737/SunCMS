@@ -39,9 +39,9 @@ namespace sun.web.ui
                 Sun.Entity.Pagelet.EntityChannel entChannel = apiChannels.getChannelWithChildrenById(channelId);
 
                 if ((entChannel != null) && (!string.IsNullOrEmpty(entChannel.templateList))) {
-                    var htmlTtxt = templateHelper.getTemplatePath(entChannel.templateList);
+                    var path = templateHelper.getTemplatePath(entChannel.templateList);
 
-                    Template tmp = new Template(htmlTtxt, entChannel);
+                    Template tmp = new Template(path, entChannel);
 
                     //setContextItem(entChannel, tmp);
                     html = tmp.render();

@@ -93,7 +93,7 @@ namespace Sun.API.Pagelet
 
             return list[0];
         }
-        public EntityArchive getArchiveById(int id)
+        public EntityArchive getArchiveById(int? id)
         {
             if (id  < 0)
             {

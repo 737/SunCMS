@@ -1,13 +1,14 @@
 ﻿
 
-<p>
-    title: [@c:subject ? - ] [@s:DescrIption ?          - ]   [@s:beian]   
-    <br />asdfasfdsaf   [@s:OrganizationAddress ? -- : ==]                [@s: dutyAdmin ]
-</p>
-<p>
+
 
 
 <sun:include src="header.htm" />
+
+<div>
+    title: [@c:subject ? - ] [@s:DescrIption ?          - ]   [@s:beian]
+    <br />asdfasfdsaf   [@s:OrganizationAddress ? -- : ==]                [@s: dutyAdmin ]
+</div>
 
 
 <div id="warpper">
@@ -26,40 +27,36 @@
             </div>
             <div class="left_5">
                 <div style=" padding:40px 35px 10px 35px;">
-                    <p>地址：
-                </div>
+                <p>地址：</p>
             </div>
         </div>
+    </div>
 
-        <div class="right">
-            <div class="right_bg"><img src="/templets/default/img/index_right_bg1.jpg" /></div>
-            <div class="right_con">
+    <div class="right">
+        <div class="right_bg"><img src="/templets/default/img/index_right_bg1.jpg" /></div>
+        <div class="right_con">
 
-                <div class="title"><img src="/templets/default/img/list_new_tit1.jpg" /></div>
-                <div class="site">当前位置：<a href="../../">首页</a> - [@channelname]</div>
-                <div class="clear"></div>
-                <div class="right_business">
-                    <ul>
-                        <sun:arclist row="2">
-                            <li>
-                                <p><a target="_blank">[@rowIndex]{subject}</a></p>
-                                <span>{time, exp='yyyy/MM/dd'}</span>
-                            </li>
-                        </sun:arclist>
-                    </ul>
-                </div>
-
-
-                <!--<mc:list cids="{channelid}" pagin="true" pagesize="18" type="art">
-                    <li><p><a href="{pageurlb}" target="_blank">{subject}</a></p><span>{dateline,t="yyyy-MM-dd"}</span></li>
-                </mc:list>-->
-
+            <div class="title"><img src="/templets/default/img/list_new_tit1.jpg" /></div>
+            <div class="site">当前位置：<a href="../../">首页</a> - [@channelname]</div>
+            <div class="clear"></div>
+            <div class="right_business">
+                <ul>
+                    <sun:arclist row="2">
+                        <li>
+                            <p><a target="_blank">[@rowIndex]{subject}</a></p>
+                            <span>{time, exp='yyyy/MM/dd'}</span>
+                        </li>
+                    </sun:arclist>
+                </ul>
             </div>
-            <div class="right_bg"><img src="/templets/default/img/index_right_bg3.jpg" /></div>
         </div>
-        <!--right-->
+        <div class="right_bg"><img src="/templets/default/img/index_right_bg3.jpg" /></div>
+    </div>
+    <!--right-->
 
-        <div class="clear"></div>
-    </div><!--main-->
+    <div class="clear"></div>
+</div>
+    <!--main-->
+</div>
 
     <sun:include src="footer.htm"></sun:include>
